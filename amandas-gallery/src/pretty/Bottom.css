@@ -3,7 +3,9 @@
     flex-direction: row;        
     justify-content: space-between;  
     align-items: flex-start;   
-    padding: 10px 20px;        
+    padding-bottom: 3vh;  
+    padding-left: 3vw;  
+    padding-right: 3vw;    
 }
 
 .bottom-right p {
@@ -30,4 +32,16 @@
 .bottom-right a {
     text-decoration: none;
     color: inherit;
+}
+
+
+
+@media (max-width: 767px) {
+
+    .bottom-left p {
+    font-size: 12px;
+  }
+    .bottom-right p {
+    font-size: 12px;
+  }
 }

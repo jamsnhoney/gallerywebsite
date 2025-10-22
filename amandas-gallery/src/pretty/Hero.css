@@ -12,7 +12,7 @@
   width: auto;
   height: auto;
   cursor: grab;
-  transition: transform 0.1s ease;
+  transition: transform 0.25s ease;
   user-select: none;
 }
 
