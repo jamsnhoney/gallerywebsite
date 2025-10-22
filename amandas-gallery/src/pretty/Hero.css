@@ -1,0 +1,58 @@
+/* .hero-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    flex-wrap: wrap; 
+}
+
+.hero-gallery img {
+    flex: 0 0 auto;  
+    width: auto; 
+    height: auto;    
+    object-fit: contain;
+    max-width: 100%; 
+    display: block; 
+    transition: transform 0.25s cubic-bezier(.34,1.56,.64,1); 
+}
+
+.hero-gallery img:hover {
+    cursor: pointer;       
+    transform: translateY(-10px); 
+} */
+
+.sticker-board {
+  position: relative;
+  width: 90vw;
+  height: 80vh;
+
+  border: 2px dashed #ccc;
+  border-radius: 16px;
+  margin: 50px auto;
+  overflow: hidden;
+}
+
+.sticker {
+  position: absolute;
+  width: auto;
+  height: auto;
+  cursor: grab;
+  transition: transform 0.1s ease;
+  user-select: none;
+}
+
+.sticker:hover {
+cursor: pointer;       
+transform: translateY(-10px); 
+}
+
+.sticker:active {
+  cursor: grabbing;
+  transform: scale(1.05);
+}
+
+.sticker.active {
+  transform: translateY(-5px);
+}

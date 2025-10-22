@@ -1,0 +1,20 @@
+.bottom {
+    display: flex;
+    flex-direction: row;        
+    justify-content: space-between;  
+    align-items: flex-start;   
+    padding: 10px 20px;        
+}
+
+.bottom p {
+    font-family: 'neue-haas-grotesk-display-pro', sans-serif;
+    margin: 0;              
+    font-size: 16px;
+    color: #434842;
+    font-weight: 300;
+    cursor: pointer;     
+    transition: color 0.3s ease;
+}
+.bottom p:hover {
+    color: #9cba7c;        
+}
