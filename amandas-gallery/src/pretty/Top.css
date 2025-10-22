@@ -25,7 +25,6 @@
 
 .bullets {
     font-size: 16px;
-    font-family: 'neue-haas-grotesk-display-pro', sans-serif;
     font-weight: 150;
     color: #434842;
     margin: 5px;
@@ -52,7 +51,21 @@
   transition: color 0.3s ease;
 }
 
+.navbar a {
+  margin: 0;               /* remove default paragraph spacing */
+  font-size: 16px;
+  color: #434842;
+  font-weight: 150;
+  cursor: pointer;         /* makes it feel clickable */
+  transition: color 0.3s ease;
+  text-decoration: none;
+
+}
+
 .navbar p:hover {
+  color: #9cba7c;          /* subtle hover color */
+}
+.navbar a:hover {
   color: #9cba7c;          /* subtle hover color */
 }
 
@@ -114,6 +127,10 @@
   .title h1 {
     font-size: 32px;         /* resize text for smaller screens */
     white-space: nowrap;     /* keeps the name on one line */
+  }
+
+  .bullets {
+    font-size: 12px;
   }
 
   .navbar {

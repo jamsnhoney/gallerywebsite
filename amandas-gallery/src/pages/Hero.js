@@ -112,6 +112,7 @@ export default function StickerBoard() {
     >
       {positions.map((sticker) => (
         <img
+          draggable={false}
           key={sticker.id}
           id={`sticker-${sticker.id}`}
           src={sticker.src}

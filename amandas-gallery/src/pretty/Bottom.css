@@ -19,11 +19,15 @@
     margin: 0;              
     font-size: 16px;
     color: #434842;
-    font-weight: 150;
-    cursor: pointer;     
+    font-weight: 150;   
     transition: color 0.3s ease;
 }
 
-.bottom p:hover {
+.bottom p:hover a {
     color: #9cba7c;        
+}
+
+.bottom-right a {
+    text-decoration: none;
+    color: inherit;
 }

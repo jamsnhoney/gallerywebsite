@@ -34,8 +34,14 @@ function Top() {
           <p>all</p>
           <p>work</p>
           <p>fun-work</p>
-          <p>contact</p>
-          <p>resume</p>
+          <a> contact</a>
+          <a
+          href="/AMANDA_ZHU.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          >
+          resume
+         </a>
         </div>
       </div>
     </div>
