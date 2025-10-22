@@ -1,4 +1,3 @@
-import React from 'react';
 import '../pretty/Top.css';
 
 import '../assets/smiskiiii.png'

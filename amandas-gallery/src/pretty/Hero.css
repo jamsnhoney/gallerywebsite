@@ -25,11 +25,8 @@
 
 .sticker-board {
   position: relative;
-  width: 90vw;
-  height: 80vh;
-
-  border: 2px dashed #ccc;
-  border-radius: 16px;
+  width: 98vw;
+  height: 100vh;
   margin: 50px auto;
   overflow: hidden;
 }
