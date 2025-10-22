@@ -1,0 +1,57 @@
+.top {
+  display: flex;
+  flex-direction: row;        
+  justify-content: space-between;  
+  align-items: flex-start;   
+  padding: 10px 20px;        
+}
+
+.title {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;  /* side by side */
+    margin-left: 20px; /* small left margin if you want spacing */
+}
+
+.title img {
+    width: 70px;
+    height: auto;
+}
+
+.title h1 {
+    font-size: 50px;
+    color: #434842;
+}
+
+.bullets {
+    font-size: 16px;
+    font-family: 'neue-haas-grotesk-display-pro', sans-serif;
+    font-weight: 150;
+    color: #434842;
+    margin: 5px;
+    text-align: left;
+    margin-left: 70px;
+}
+
+
+.navbar {
+  display: flex;
+  flex-direction: row;     /* align side by side */
+  justify-content: flex-start;  /* or center / space-between */
+  align-items: center;
+  gap: 90px;               /* adds space between each p */
+  padding: 30px 20px;      /* optional, for breathing room */
+}
+
+.navbar p {
+  margin: 0;               /* remove default paragraph spacing */
+  font-size: 16px;
+  color: #434842;
+  font-weight: 300;
+  cursor: pointer;         /* makes it feel clickable */
+  transition: color 0.3s ease;
+}
+
+.navbar p:hover {
+  color: #9cba7c;          /* subtle hover color */
+}
