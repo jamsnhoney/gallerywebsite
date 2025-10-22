@@ -55,3 +55,71 @@
 .navbar p:hover {
   color: #9cba7c;          /* subtle hover color */
 }
+
+/* hamburger icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #434842;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+/* animation for X toggle */
+.hamburger.open span:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
+}
+
+/* nav links (default) */
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  gap: 90px;
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    position: relative;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: rgb(249, 249, 249);
+    border-radius: 8px;
+    padding: 10px 20px;
+    gap: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}

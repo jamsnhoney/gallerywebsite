@@ -1,30 +1,44 @@
-import '../pretty/Top.css';
-
-import '../assets/smiskiiii.png'
+import { useState } from "react";
+import "../pretty/Top.css";
+import smiski from "../assets/smiskiiii.png";
 
 function Top() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <div className="top">
-    <div className="hello">
-    <div className="title">
-        <img src= {require('../assets/smiskiiii.png')} alt="smiski" className="smiski-image" />
-        <h1> amanda zhu .ᐟ </h1>
+      <div className="hello">
+        <div className="title">
+          <img src={smiski} alt="smiski" className="smiski-image" />
+          <h1>amanda zhu .ᐟ</h1>
+        </div>
+        <div className="bullets">
+          <p>⊹ uix/ux/graphic/logo design</p>
+          <p>⊹ growing queen's ux club (co-founded last year)</p>
+          <p>⊹ studying biomedical computing @ queen's u</p>
+        </div>
+      </div>
+
+      {/* navbar */}
+      <div className="navbar">
+        <div
+          className={`hamburger ${menuOpen ? "open" : ""}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div className={`nav-links ${menuOpen ? "show" : ""}`}>
+          <p>all</p>
+          <p>work</p>
+          <p>fun-work</p>
+          <p>contact</p>
+          <p>resume</p>
+        </div>
+      </div>
     </div>
-    <div className="bullets">
-        <p> ⊹ uix/ux/graphic/logo design</p>
-        <p> ⊹ growing queen's ux club (co-founded last year)</p>                
-        <p> ⊹ studying biomedical computing @ queen's u</p> 
-    </div>
-    </div>
-    <div className="navbar">
-        <p>all</p>
-        <p>work</p>
-        <p>fun-work</p>
-        <p>contact</p>
-        <p>resume</p>
-    </div>
-    </div>
-    
   );
 }
 

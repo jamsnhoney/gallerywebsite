@@ -9,6 +9,8 @@ import img5 from '../assets/5-laylow.png';
 import img6 from '../assets/6-creativemode.png';
 import img7 from '../assets/7-qwicfolders.png';
 import img8 from '../assets/8-qwicbunny.png';
+import img9 from '../assets/qux-sticker.png';
+import img10 from '../assets/qux-whatis.png';
 
 import React, { useState, useRef } from "react";
 // import "./StickerBoard.css";
@@ -17,12 +19,14 @@ import '../pretty/Hero.css';
 const stickers = [
   { id: 1, src: img1, top: 50, left: 60 },
   { id: 2, src: img2, top: 140, left: 350 },
-  { id: 3, src: img3, top: 220, left: 900 },
-  { id: 4, src: img4, top: 500, left: 800 }, 
+  { id: 3, src: img3, top: 220, left: 300 },
+  { id: 4, src: img4, top: 500, left: 400 }, 
   { id: 5, src: img5, top: 380, left: 130 },
-  { id: 6, src: img6, top: 660, left: 450 },
-  { id: 7, src: img7, top: 540, left: 380 },
-  { id: 8, src: img8, top: 620, left: 160 },
+  { id: 6, src: img6, top: 360, left: 250 },
+  { id: 7, src: img7, top: 340, left: 180 },
+  { id: 8, src: img8, top: 320, left: 160 },
+  { id: 9, src: img9, top: 200, left: 500 },
+  { id: 10, src: img10, top: 350, left: 600 },
 ];
 
 export default function StickerBoard() {
