@@ -12,15 +12,15 @@ import img10 from '../assets/qux-whatis.png';
 import '../pretty/Hero.css';
 
 const stickers = [
-  { id: 1, src: img1, top: 0.08, left: 0.06 },
-  { id: 2, src: img2, top: 0.38, left: 0.35 },
-  { id: 3, src: img3, top: 0.28, left: 0.30 },
+  { id: 1, src: img1, top: 0.1, left: 0.06 },
+  { id: 2, src: img2, top: 0.05, left: 0.35 },
+  { id: 3, src: img3, top: 0.20, left: 0.55 },
   { id: 4, src: img4, top: 0.5, left: 0.4 }, 
-  { id: 5, src: img5, top: 0.38, left: 0.13 },
+  { id: 5, src: img5, top: 0.48, left: 0.2 },
   { id: 6, src: img6, top: 0.36, left: 0.25 },
-  { id: 7, src: img7, top: 0.34, left: 0.18 },
+  { id: 7, src: img7, top: 0.54, left: 0.05 },
   { id: 8, src: img8, top: 0.32, left: 0.16 },
-  { id: 9, src: img9, top: 0.2, left: 0.5 },
+  { id: 9, src: img9, top: 0.2, left: 0.25 },
   { id: 10, src: img10, top: 0.35, left: 0.6 },
 ];
 
