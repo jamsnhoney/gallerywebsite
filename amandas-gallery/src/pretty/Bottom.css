@@ -6,15 +6,24 @@
     padding: 10px 20px;        
 }
 
-.bottom p {
-    font-family: 'neue-haas-grotesk-display-pro', sans-serif;
+.bottom-right p {
     margin: 0;              
     font-size: 16px;
     color: #434842;
-    font-weight: 300;
+    font-weight: 150;
     cursor: pointer;     
     transition: color 0.3s ease;
 }
+
+.bottom-left p {
+    margin: 0;              
+    font-size: 16px;
+    color: #434842;
+    font-weight: 150;
+    cursor: pointer;     
+    transition: color 0.3s ease;
+}
+
 .bottom p:hover {
     color: #9cba7c;        
 }

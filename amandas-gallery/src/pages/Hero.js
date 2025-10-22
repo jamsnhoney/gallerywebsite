@@ -1,6 +1,4 @@
-// import React from 'react';
-// import '../pretty/Hero.css';
-
+import React, { useState, useRef, useEffect } from "react";
 import img1 from '../assets/1-qwicmerch.png';
 import img2 from '../assets/2-resumeworkshop.png';
 import img3 from '../assets/3-abighead.png';
@@ -11,29 +9,42 @@ import img7 from '../assets/7-qwicfolders.png';
 import img8 from '../assets/8-qwicbunny.png';
 import img9 from '../assets/qux-sticker.png';
 import img10 from '../assets/qux-whatis.png';
-
-import React, { useState, useRef } from "react";
-// import "./StickerBoard.css";
 import '../pretty/Hero.css';
 
 const stickers = [
-  { id: 1, src: img1, top: 50, left: 60 },
-  { id: 2, src: img2, top: 140, left: 350 },
-  { id: 3, src: img3, top: 220, left: 300 },
-  { id: 4, src: img4, top: 500, left: 400 }, 
-  { id: 5, src: img5, top: 380, left: 130 },
-  { id: 6, src: img6, top: 360, left: 250 },
-  { id: 7, src: img7, top: 340, left: 180 },
-  { id: 8, src: img8, top: 320, left: 160 },
-  { id: 9, src: img9, top: 200, left: 500 },
-  { id: 10, src: img10, top: 350, left: 600 },
+  { id: 1, src: img1, top: 0.08, left: 0.06 },
+  { id: 2, src: img2, top: 0.38, left: 0.35 },
+  { id: 3, src: img3, top: 0.28, left: 0.30 },
+  { id: 4, src: img4, top: 0.5, left: 0.4 }, 
+  { id: 5, src: img5, top: 0.38, left: 0.13 },
+  { id: 6, src: img6, top: 0.36, left: 0.25 },
+  { id: 7, src: img7, top: 0.34, left: 0.18 },
+  { id: 8, src: img8, top: 0.32, left: 0.16 },
+  { id: 9, src: img9, top: 0.2, left: 0.5 },
+  { id: 10, src: img10, top: 0.35, left: 0.6 },
 ];
 
 export default function StickerBoard() {
   const [positions, setPositions] = useState(stickers);
   const [active, setActive] = useState(null);
   const [topZ, setTopZ] = useState(stickers.length);
+  const [boardSize, setBoardSize] = useState({ width: 0, height: 0 });
   const boardRef = useRef(null);
+
+  // update board size on mount and on window resize
+  useEffect(() => {
+    const updateSize = () => {
+      if (boardRef.current) {
+        setBoardSize({
+          width: boardRef.current.clientWidth,
+          height: boardRef.current.clientHeight,
+        });
+      }
+    };
+    updateSize();
+    window.addEventListener("resize", updateSize);
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
 
   const getEventPosition = (e) => {
     if (e.touches) {
@@ -44,9 +55,7 @@ export default function StickerBoard() {
 
   const bringToFront = (id) => {
     setPositions((prev) =>
-      prev.map((s) =>
-        s.id === id ? { ...s, z: topZ + 1 } : s
-      )
+      prev.map((s) => (s.id === id ? { ...s, z: topZ + 1 } : s))
     );
     setTopZ((prev) => prev + 1);
   };
@@ -59,11 +68,10 @@ export default function StickerBoard() {
   const handleEnd = () => setActive(null);
 
   const handleMove = (e) => {
-    if (active === null) return;
+    if (active === null || !boardRef.current) return;
 
-    const board = boardRef.current;
-    const boardRect = board.getBoundingClientRect();
     const { x, y } = getEventPosition(e);
+    const boardRect = boardRef.current.getBoundingClientRect();
 
     setPositions((prev) =>
       prev.map((sticker) => {
@@ -73,14 +81,14 @@ export default function StickerBoard() {
           const halfW = imgRect.width / 2;
           const halfH = imgRect.height / 2;
 
-          let newLeft = x - boardRect.left - halfW;
-          let newTop = y - boardRect.top - halfH;
+          let newLeft = (x - boardRect.left - halfW) / boardRect.width;
+          let newTop = (y - boardRect.top - halfH) / boardRect.height;
 
-          // stay inside bounds
-          newLeft = Math.max(0, Math.min(newLeft, boardRect.width - imgRect.width));
-          newTop = Math.max(0, Math.min(newTop, boardRect.height - imgRect.height));
+          // clamp between 0 and 1
+          newLeft = Math.max(0, Math.min(newLeft, 1));
+          newTop = Math.max(0, Math.min(newTop, 1));
 
-          return { ...sticker, left: newLeft, top: newTop };
+          return { ...sticker, top: newTop, left: newLeft };
         }
         return sticker;
       })
@@ -93,6 +101,7 @@ export default function StickerBoard() {
       className="sticker-board"
       onMouseMove={handleMove}
       onMouseUp={handleEnd}
+      onMouseLeave={handleEnd}
       onTouchMove={handleMove}
       onTouchEnd={handleEnd}
     >
@@ -104,8 +113,8 @@ export default function StickerBoard() {
           alt="sticker"
           className="sticker"
           style={{
-            top: sticker.top,
-            left: sticker.left,
+            top: `${sticker.top * boardSize.height}px`,
+            left: `${sticker.left * boardSize.width}px`,
             zIndex: sticker.z,
           }}
           onMouseDown={() => handleStart(sticker.id)}
@@ -115,24 +124,3 @@ export default function StickerBoard() {
     </div>
   );
 }
-
-
-// function Hero() {
-//   return (
-//     <div className="hero">
-//       <div className="hero-gallery">
-//         <img src={img1} alt="qwicmerch" className="hero-image" />
-//         <img src={img2} alt="resumeworkshop" className="hero-image" />
-//         <img src={img3} alt="abighead" className="hero-image" />
-//         <img src={img4} alt="coffeechat" className="hero-image" />
-//         <img src={img5} alt="laylow" className="hero-image" />
-//         <img src={img6} alt="creativemode" className="hero-image" />
-//         <img src={img7} alt="qwicfolders" className="hero-image" />
-//         <img src={img8} alt="qwicbunny" className="hero-image" />
-//       </div>
-//     </div>
-    
-//   );
-// }
-
-// export default Hero;

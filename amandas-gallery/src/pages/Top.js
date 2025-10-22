@@ -13,9 +13,9 @@ function Top() {
           <h1>amanda zhu .ᐟ</h1>
         </div>
         <div className="bullets">
-          <p>⊹ uix/ux/graphic/logo design</p>
-          <p>⊹ growing queen's ux club (co-founded last year)</p>
-          <p>⊹ studying biomedical computing @ queen's u</p>
+          <p>༝ uix/ux/graphic/logo design ꕀ</p>
+          <p>༝ growing co-founded queen's ux club ｡˚ </p>
+          <p>༝ studying biomedical computing @ queen's u ⊹</p>
         </div>
       </div>
 

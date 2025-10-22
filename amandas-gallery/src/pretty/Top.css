@@ -3,14 +3,14 @@
   flex-direction: row;        
   justify-content: space-between;  
   align-items: flex-start;   
-  padding: 10px 20px;        
+  padding-top: 3vh;  
+  padding-left: 3vw;   
 }
 
 .title {
     display: flex;
     align-items: flex-end;
-    flex-direction: row;  /* side by side */
-    margin-left: 20px; /* small left margin if you want spacing */
+    flex-direction: row; 
 }
 
 .title img {
@@ -30,7 +30,7 @@
     color: #434842;
     margin: 5px;
     text-align: left;
-    margin-left: 70px;
+    margin-left: 50px;
 }
 
 
@@ -47,7 +47,7 @@
   margin: 0;               /* remove default paragraph spacing */
   font-size: 16px;
   color: #434842;
-  font-weight: 300;
+  font-weight: 150;
   cursor: pointer;         /* makes it feel clickable */
   transition: color 0.3s ease;
 }
@@ -97,6 +97,25 @@
 }
 
 @media (max-width: 767px) {
+
+    .title {
+    display: flex;
+    flex-direction: row;     /* stay side by side */
+    align-items: center;     /* vertically aligned */
+    flex-wrap: nowrap;       /* prevent wrapping onto two lines */
+  }
+
+  .title img {
+    width: 55px;             /* slightly smaller on mobile */
+    height: auto;
+    padding-left: 2vw;
+  }
+
+  .title h1 {
+    font-size: 32px;         /* resize text for smaller screens */
+    white-space: nowrap;     /* keeps the name on one line */
+  }
+
   .navbar {
     position: relative;
   }

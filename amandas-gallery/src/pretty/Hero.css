@@ -1,33 +1,8 @@
-/* .hero-gallery {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    flex-wrap: wrap; 
-}
-
-.hero-gallery img {
-    flex: 0 0 auto;  
-    width: auto; 
-    height: auto;    
-    object-fit: contain;
-    max-width: 100%; 
-    display: block; 
-    transition: transform 0.25s cubic-bezier(.34,1.56,.64,1); 
-}
-
-.hero-gallery img:hover {
-    cursor: pointer;       
-    transform: translateY(-10px); 
-} */
-
 .sticker-board {
   position: relative;
-  width: 98vw;
+  width: 90vw;
   height: 80vh;
-  margin: 50px auto;
+  margin: 20px auto;
   overflow: hidden;
 }
 
@@ -52,4 +27,16 @@ transform: translateY(-10px);
 
 .sticker.active {
   transform: translateY(-5px);
+}
+
+
+@media (max-width: 767px) {
+  .sticker-board {
+    width: 95vw;
+    height: 60vh;
+  }
+
+  .sticker {
+    max-width: 150px;
+  }
 }
