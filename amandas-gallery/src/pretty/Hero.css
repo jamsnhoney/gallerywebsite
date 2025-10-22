@@ -4,6 +4,7 @@
   height: 80vh;
   margin: 20px auto;
   overflow: hidden;
+  touch-action: none;
 }
 
 .sticker {

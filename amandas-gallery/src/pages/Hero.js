@@ -70,6 +70,10 @@ export default function StickerBoard() {
   const handleMove = (e) => {
     if (active === null || !boardRef.current) return;
 
+    if (e.type === "touchmove") {// prevent the screen from scrolling while dragging
+      e.preventDefault();
+    }
+
     const { x, y } = getEventPosition(e);
     const boardRect = boardRef.current.getBoundingClientRect();
 
@@ -94,6 +98,7 @@ export default function StickerBoard() {
       })
     );
   };
+
 
   return (
     <div
