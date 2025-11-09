@@ -31,10 +31,17 @@ function Top() {
         </div>
 
         <div className={`nav-links ${menuOpen ? "show" : ""}`}>
-          <p>all</p>
+          {/* <p>all</p>
           <p>work</p>
           <p>fun-work</p>
-          <a> contact</a>
+          <a> contact</a> */}
+          <a
+          href="https://www.linkedin.com/in/amanda-zhu-b01422242/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >
+          linkedin ☕︎⛾
+         </a>
           <a
           href="/AMANDA_ZHU.pdf"
           target="_blank"

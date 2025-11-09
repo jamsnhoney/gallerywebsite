@@ -112,7 +112,7 @@
 
 @media (max-width: 767px) {
 
-    .title {
+  .title {
     display: flex;
     flex-direction: row;     /* stay side by side */
     align-items: center;     /* vertically aligned */
@@ -131,7 +131,7 @@
   }
 
   .bullets {
-    font-size: 12px;
+    font-size: 15px;
   }
 
   .navbar {
