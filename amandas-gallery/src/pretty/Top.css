@@ -52,6 +52,12 @@
   transition: color 0.3s ease;
 }
 
+.navbar p:hover {
+  color: #9cba7c;          /* subtle hover color */
+  transition: color 0.3s ease;
+}
+
+
 .navbar a {
   margin: 0;               /* remove default paragraph spacing */
   font-size: 16px;
@@ -63,11 +69,9 @@
 
 }
 
-.navbar p:hover {
-  color: #9cba7c;          /* subtle hover color */
-}
 .navbar a:hover {
   color: #9cba7c;          /* subtle hover color */
+  transition: color 0.3s ease;
 }
 
 /* hamburger icon */
@@ -136,6 +140,7 @@
 
   .navbar {
     position: relative;
+    height: 40px;
   }
 
   .hamburger {

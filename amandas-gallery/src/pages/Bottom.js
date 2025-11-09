@@ -6,7 +6,7 @@ function Bottom() {
     <div className="bottom">
 
     <div className="bottom-left">
-        <p> °‧ design & 𓆝 coded 𓆟 𓆞 ·｡ </p>
+        <p> designed & coded 𓆟 𓆞 ·｡ </p>
     </div>
 
     {/* <div className="bottom-right">

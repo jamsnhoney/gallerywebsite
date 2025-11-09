@@ -13,8 +13,8 @@ function Top() {
           <h1>amanda zhu .ᐟ</h1>
         </div>
         <div className="bullets">
-          <p>༝ uix/ux/graphic/logo design ꕀ</p>
-          <p>༝ growing co-founded queen's ux club ｡˚ </p>
+          <p>༝ ui/ux & graphic design 𓂃✍︎</p>
+          <p>༝ growing queen's ux club, co-founded 03/2025 ｡˚ </p>
           <p>༝ studying biomedical computing @ queen's u ⊹</p>
         </div>
       </div>
@@ -47,7 +47,7 @@ function Top() {
           target="_blank"
           rel="noopener noreferrer"
           >
-          resume
+          resume  ༘⋆
          </a>
         </div>
       </div>

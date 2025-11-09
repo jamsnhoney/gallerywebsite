@@ -26,12 +26,14 @@
 }
 
 .bottom p:hover a {
-    color: #9cba7c;        
+    color: #9cba7c;   
+    transition: color 0.3s ease;     
 }
 
 .bottom-right a {
     text-decoration: none;
     color: inherit;
+    transition: color 0.3s ease;
 }
 
 
