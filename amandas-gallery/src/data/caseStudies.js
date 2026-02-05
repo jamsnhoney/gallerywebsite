@@ -1,40 +1,43 @@
 import wingmateImg from "../assets/wingmate.png";
 
+const defaultMeta = {
+  role: ["—"],
+  team: ["—"],
+  skills: ["—"],
+  timeline: ["—"],
+};
+
 export const caseStudiesData = [
   {
     slug: "wingmate",
     title: "wingmate",
     galleryTitle: "wingmate | the fresh into the world dating app",
     imageSrc: wingmateImg,
-    caption: "A fresh take on dating app design for people who want real connections.",
+    role: ["team lead &", "product designer"],
+    team: ["elliott vince", "teagan wright", "& myself"],
+    skills: ["illustration", "user research", "ui/ux design", "product design"],
+    timeline: ["jan - march 2026"],
   },
-
-
   {
     slug: "careerxl-website-audit",
     title: "New website new brand",
     galleryTitle: "new website new brand | website audit for careerxl",
     imageSrc: wingmateImg,
-    caption: "Website audit and strategy for CareerXL.",
+    ...defaultMeta,
   },
-
-
   {
     slug: "lets-get-moving",
     title: "Let's get moving",
     galleryTitle: "let's get f***king moving | graphic and website design",
     imageSrc: wingmateImg,
-    caption: "Graphic and website design to get people moving.",
+    ...defaultMeta,
   },
-
-
-  
   {
     slug: "productivity-app",
     title: "My favourite productivity app",
     galleryTitle: "my favourite productivity app | ux research is easy when i am the only user",
     imageSrc: wingmateImg,
-    caption: "UX research and design when you're your own user.",
+    ...defaultMeta,
   },
 ];
 

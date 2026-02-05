@@ -81,7 +81,7 @@
 .case-study-detail-title {
   font-family: "Lexend", sans-serif;
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: 700;
   color: #434842;
   margin: 0 0 1.5rem;
   line-height: 1.2;
@@ -102,14 +102,42 @@
   vertical-align: middle;
 }
 
-.case-study-caption {
+.case-study-meta-cols {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.case-study-meta-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.case-study-meta-title {
   font-family: "Lexend", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #71776E;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.case-study-meta-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.case-study-meta-list span {
+  font-family: "Lexend", sans-serif;
+  font-size: 15px;
   font-weight: 300;
   color: #71776E;
-  margin: 0 0 2.5rem;
-  line-height: 1.5;
+  line-height: 1.4;
 }
+
 
 .case-study-section {
   margin-bottom: 2.5rem;
@@ -118,9 +146,9 @@
 
 .case-study-section h2 {
   font-family: "Lexend", sans-serif;
-  font-size: 1.25rem;
-  font-weight: 400;
-  color: #434842;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #B6B9B5;
   margin: 0 0 0.75rem;
 }
 
@@ -176,15 +204,25 @@
     margin-bottom: 1rem;
   }
 
-  .case-study-caption {
-    margin-bottom: 2rem;
-  }
-
   .case-study-section {
     margin-bottom: 2rem;
   }
 
   .case-study-section h2 {
     font-size: 1.1rem;
+  }
+
+  .case-study-meta-cols {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .case-study-meta-title {
+    font-size: 0.95rem;
+  }
+
+  .case-study-meta-list span {
+    font-size: 14px;
   }
 }
