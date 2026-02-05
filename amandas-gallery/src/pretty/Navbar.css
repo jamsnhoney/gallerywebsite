@@ -1,17 +1,26 @@
 .top {
   display: flex;
-  flex-direction: row;        
-  justify-content: space-between;  
-  align-items: flex-start;   
-  padding-top: 3vh;  
-  padding-left: 3vw;  
-  padding-right: 3vw; 
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 2vh;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+}
+
+.hello-link {
+  text-decoration: none;
+  color: inherit;
 }
 
 .title {
     display: flex;
     align-items: flex-end;
-    flex-direction: row; 
+    flex-direction: row;
 }
 
 .title img {

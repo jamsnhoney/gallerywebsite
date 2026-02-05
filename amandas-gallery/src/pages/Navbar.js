@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "../pretty/Navbar.css";
 
 function Navbar() {
@@ -6,14 +7,15 @@ function Navbar() {
 
   return (
     <div className="top">
-      <div className="hello">
-        <div className="title">
-          <h1>amanda zhu.ᐟ</h1>
+      <Link to="/" className="hello-link">
+        <div className="hello">
+          <div className="title">
+            <h1>amanda zhu.ᐟ</h1>
+          </div>
+          <p>ui/ux/graphic designer breaking into product design. </p>
         </div>
-        <p>ui/ux/graphic designer breaking into product design. </p>
-      </div>
+      </Link>
 
-      {/* navbar */}
       <div className="navbar">
         <div
           className={`hamburger ${menuOpen ? "open" : ""}`}
@@ -25,11 +27,11 @@ function Navbar() {
         </div>
 
         <div className={`nav-links ${menuOpen ? "show" : ""}`}>
-          <a href="#case-studies">case studies</a>
-          <a href="#fun-work">fun work</a>
-          <a href="#about">about</a>
+          <a href="/#case-studies">case studies</a>
+          <a href="/#fun-work">fun work</a>
+          <a href="/#about">about</a>
           <a href="/AMANDA_ZHU.pdf" target="_blank" rel="noopener noreferrer">resume</a>
-          <a href="#contact">contact</a>
+          <Link to="/contact" onClick={() => setMenuOpen(false)}>contact</Link>
         </div>
       </div>
     </div>
