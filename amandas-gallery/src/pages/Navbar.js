@@ -4,6 +4,12 @@ import "../pretty/Navbar.css";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [bunnyWiggle, setBunnyWiggle] = useState(false);
+
+  const triggerBunnyAnimation = () => {
+    setBunnyWiggle(true);
+    setTimeout(() => setBunnyWiggle(false), 400);
+  };
 
   return (
     <div className="top">
@@ -15,6 +21,14 @@ function Navbar() {
           <p>ui/ux/graphic designer breaking into product design. </p>
         </div>
       </Link>
+
+      {/* Desktop: center-bottom decorative bunny (hover animation) */}
+      <img
+        src="/bunny.png"
+        alt=""
+        className="navbar-bunny navbar-bunny-desktop"
+        aria-hidden
+      />
 
       <div className="navbar">
         <div

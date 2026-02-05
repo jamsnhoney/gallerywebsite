@@ -20,6 +20,8 @@
 .hello-link {
   text-decoration: none;
   color: inherit;
+  position: relative;
+  z-index: 1;
 }
 
 .title {
@@ -48,13 +50,15 @@
   text-decoration: none;
 }
 
-.navbar { 
+.navbar {
   display: flex;
-  flex-direction: row;     /* align side by side */
-  justify-content: flex-start;  /* or center / space-between */
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
-  gap: 90px;               /* adds space between each p */
-  padding: 30px 20px;      /* optional, for breathing room */
+  gap: 90px;
+  padding: 30px 20px;
+  position: relative;
+  z-index: 1;
 }
 
 .navbar p { /* case studies | fun work | about | resume | contact */
@@ -80,7 +84,7 @@
   font-weight: 200;
   cursor: pointer;
   transition: color 0.3s ease;
-  padding-top: 2vh;
+  padding-top: 3vh;
   text-decoration: none;
 }
 
@@ -118,11 +122,52 @@
   transform: translateY(-6px) rotate(-45deg);
 }
 
+/* decorative bunny — desktop: center-bottom, hover animation */
+.navbar-bunny-desktop {
+  display: none;
+}
+
+.navbar-bunny-mobile {
+  display: none;
+}
+
+@keyframes bunny-wiggle {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(10deg); }
+  75% { transform: rotate(-10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.bunny-wiggle {
+  animation: bunny-wiggle 0.4s ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .navbar-bunny-desktop {
+    display: block;
+    position: absolute;
+    left: 47%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    height: 70px;
+    width: auto;
+    pointer-events: auto;
+    z-index: 0;
+    transition: transform 0.25s ease-in-out;
+  }
+
+  .navbar-bunny-desktop:hover {
+    transform: translateX(-50%) rotate(10deg);
+  }
+}
+
 /* nav links (default) */
 .nav-links {
   display: flex;
   flex-direction: row;
   gap: 90px;
+  position: relative;
+  z-index: 1;
 }
 
 @media (max-width: 767px) {
@@ -159,6 +204,20 @@
   .navbar {
     position: relative;
     height: 40px;
+  }
+
+  .navbar-bunny-desktop {
+    display: none;
+  }
+
+  .navbar-bunny-mobile {
+    display: block;
+    height: 28px;
+    width: auto;
+    margin-right: 12px;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: transform 0.25s ease-in-out;
   }
 
   .hamburger {
