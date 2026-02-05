@@ -4,12 +4,17 @@
   justify-content: space-between;
   align-items: flex-start;
   padding-top: 2vh;
+  padding-bottom: 2vh;
   padding-left: 3vw;
   padding-right: 3vw;
   position: sticky;
   top: 0;
   z-index: 100;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
 }
 
 .hello-link {
@@ -28,13 +33,13 @@
     height: auto;
 }
 
-.title h1 {
+.title h1 { /* amanda zhu.ᐟ */
     font-size: 50px;
     color: #434842;
 }
 
 
-.hello p {
+.hello p { /* i'm a graphic designer breaking into product design. */
   font-size: 16px;
   color: #434842;
   font-weight: 200;
@@ -43,7 +48,7 @@
   text-decoration: none;
 }
 
-.navbar {
+.navbar { 
   display: flex;
   flex-direction: row;     /* align side by side */
   justify-content: flex-start;  /* or center / space-between */
@@ -52,11 +57,11 @@
   padding: 30px 20px;      /* optional, for breathing room */
 }
 
-.navbar p {
+.navbar p { /* case studies | fun work | about | resume | contact */
   margin: 0;               /* remove default paragraph spacing */
-  font-size: 16px;
+  font-size: 14px;
   color: #434842;
-  font-weight: 150;
+  font-weight: 200;
   cursor: pointer;         /* makes it feel clickable */
   transition: color 0.3s ease;
 }
@@ -163,11 +168,14 @@
     position: absolute;
     top: 60px;
     right: 0;
-    background: rgb(249, 249, 249);
-    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 5px solid rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
     padding: 10px 20px;
     gap: 15px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.5) inset;
     z-index: 100;
   }
 
