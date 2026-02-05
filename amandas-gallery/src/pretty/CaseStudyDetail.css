@@ -1,0 +1,190 @@
+.case-study-detail {
+  flex: 1;
+  padding: 2rem 3vw 4rem;
+  box-sizing: border-box;
+}
+
+.case-study-detail-container {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+/* Desktop: sticky TOC */
+.case-study-toc {
+  position: sticky;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.case-study-toc-back {
+  font-family: "Lexend", sans-serif;
+  font-size: 16px;
+  color: #71776E;
+  font-weight: 300;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  margin-bottom: 0.5rem;
+}
+
+.case-study-toc-back:hover {
+  color: #9cba7c;
+}
+
+.case-study-toc-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.case-study-toc-nav a {
+  font-family: "Lexend", sans-serif;
+  font-size: 14px;
+  color: #71776E;
+  font-weight: 300;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.case-study-toc-nav a:hover {
+  color: #9cba7c;
+}
+
+/* Mobile: hide TOC, show only back */
+.case-study-mobile-back {
+  display: none;
+}
+
+.case-study-mobile-back a {
+  font-family: "Lexend", sans-serif;
+  font-size: 16px;
+  color: #71776E;
+  font-weight: 300;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.case-study-mobile-back a:hover {
+  color: #9cba7c;
+}
+
+/* Main content column */
+.case-study-main {
+  min-width: 0;
+}
+
+.case-study-detail-title {
+  font-family: "Lexend", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #434842;
+  margin: 0 0 1.5rem;
+  line-height: 1.2;
+}
+
+.case-study-hero {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  background: #f0f0f0;
+}
+
+.case-study-hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  vertical-align: middle;
+}
+
+.case-study-caption {
+  font-family: "Lexend", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #71776E;
+  margin: 0 0 2.5rem;
+  line-height: 1.5;
+}
+
+.case-study-section {
+  margin-bottom: 2.5rem;
+  scroll-margin-top: 100px;
+}
+
+.case-study-section h2 {
+  font-family: "Lexend", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #434842;
+  margin: 0 0 0.75rem;
+}
+
+.case-study-section p {
+  font-family: "Lexend", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #71776E;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.case-study-placeholder {
+  color: #71776E;
+  opacity: 0.8;
+}
+
+.case-study-back-link {
+  font-family: "Lexend", sans-serif;
+  font-size: 16px;
+  color: #71776E;
+  text-decoration: none;
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+.case-study-back-link:hover {
+  color: #9cba7c;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .case-study-detail {
+    padding: 1.5rem 4vw 3rem;
+  }
+
+  .case-study-detail-container {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .case-study-toc {
+    display: none;
+  }
+
+  .case-study-mobile-back {
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+
+  .case-study-detail-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .case-study-caption {
+    margin-bottom: 2rem;
+  }
+
+  .case-study-section {
+    margin-bottom: 2rem;
+  }
+
+  .case-study-section h2 {
+    font-size: 1.1rem;
+  }
+}

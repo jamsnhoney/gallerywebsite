@@ -18,6 +18,12 @@
   margin: 0;
 }
 
+.case-study-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 .case-study-media {
   width: 100%;
   aspect-ratio: 4 / 3;

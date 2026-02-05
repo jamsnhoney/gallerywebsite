@@ -5,6 +5,7 @@ import "./App.css";
 import Navbar from "./pages/Navbar";
 import Hero from "./pages/Hero";
 import CaseStudies from "./components/CaseStudies";
+import CaseStudyDetail from "./pages/CaseStudyDetail";
 import Contact from "./pages/Contact";
 import Bottom from "./pages/Bottom";
 
@@ -43,6 +44,14 @@ function App() {
         element={
           <Layout>
             <Contact />
+          </Layout>
+        }
+      />
+      <Route
+        path="/case-study/:slug"
+        element={
+          <Layout>
+            <CaseStudyDetail />
           </Layout>
         }
       />
