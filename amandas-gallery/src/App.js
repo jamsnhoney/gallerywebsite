@@ -1,14 +1,16 @@
 import React from "react";
 import "./App.css";
 
-import Top from "./pages/Top";
+import Navbar from "./pages/Navbar";
 import Hero from "./pages/Hero";
+import CaseStudies from "./components/CaseStudies";
 import Bottom from "./pages/Bottom";
 
 function App() {
   return (
     <>
-      <Top />
+      <Navbar />
+      <CaseStudies />
       <Hero />
       <Bottom />
     </>

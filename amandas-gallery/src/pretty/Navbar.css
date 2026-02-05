@@ -24,15 +24,15 @@
     color: #434842;
 }
 
-.bullets {
-    font-size: 16px;
-    font-weight: 150;
-    color: #434842;
-    margin: 5px;
-    text-align: left;
-    margin-left: 50px;
-}
 
+.hello p {
+  font-size: 16px;
+  color: #434842;
+  font-weight: 200;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
 
 .navbar {
   display: flex;

@@ -1,20 +1,16 @@
 import { useState } from "react";
-import "../pretty/Top.css";
-import smiski from "../assets/smiskiiii.png";
+import "../pretty/Navbar.css";
 
-function Top() {
+function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <div className="top">
       <div className="hello">
         <div className="title">
-          <img src={smiski} alt="smiski" className="smiski-image" />
-          <h1>amanda zhu .ᐟ</h1>
+          <h1>amanda zhu.ᐟ</h1>
         </div>
-        <div className="bullets">
-          <p>ui/ux/graphic designer breaking into product design. </p>
-        </div>
+        <p>ui/ux/graphic designer breaking into product design. </p>
       </div>
 
       {/* navbar */}
@@ -40,4 +36,4 @@ function Top() {
   );
 }
 
-export default Top;
+export default Navbar;
