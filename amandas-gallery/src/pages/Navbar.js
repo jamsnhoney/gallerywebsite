@@ -5,10 +5,17 @@ import "../pretty/Navbar.css";
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [bunnyWiggle, setBunnyWiggle] = useState(false);
+  const [menuBunnyWiggle, setMenuBunnyWiggle] = useState(false);
 
   const triggerBunnyAnimation = () => {
     setBunnyWiggle(true);
     setTimeout(() => setBunnyWiggle(false), 400);
+  };
+
+  const triggerMenuBunnyAnimation = (e) => {
+    e.stopPropagation();
+    setMenuBunnyWiggle(true);
+    setTimeout(() => setMenuBunnyWiggle(false), 400);
   };
 
   return (
@@ -47,6 +54,14 @@ function Navbar() {
         <a href="/#about">about</a>
         <a href="/AMANDA_ZHU.pdf" target="_blank" rel="noopener noreferrer">resume</a>
         <Link to="/contact" onClick={() => setMenuOpen(false)}>contact</Link>
+        {/* Mobile open menu: bunny to the right of links, tap to wiggle */}
+        <img
+          src="/bunny.png"
+          alt=""
+          className={`navbar-bunny navbar-bunny-menu ${menuBunnyWiggle ? "bunny-wiggle" : ""}`}
+          onClick={triggerMenuBunnyAnimation}
+          aria-hidden
+        />
       </div>
     </div>
   );
