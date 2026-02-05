@@ -13,9 +13,7 @@ function Top() {
           <h1>amanda zhu .ᐟ</h1>
         </div>
         <div className="bullets">
-          <p>༝ ui/ux & graphic design 𓂃✍︎</p>
-          <p>༝ growing queen's ux club, co-founded 03/2025 ｡˚ </p>
-          <p>༝ studying biomedical computing @ queen's u ⊹</p>
+          <p>ui/ux/graphic designer breaking into product design. </p>
         </div>
       </div>
 
@@ -31,24 +29,11 @@ function Top() {
         </div>
 
         <div className={`nav-links ${menuOpen ? "show" : ""}`}>
-          {/* <p>all</p>
-          <p>work</p>
-          <p>fun-work</p>
-          <a> contact</a> */}
-          <a
-          href="https://www.linkedin.com/in/amanda-zhu-b01422242/"
-          target="_blank"
-          rel="noopener noreferrer"
-          >
-          linkedin ☕︎⛾
-         </a>
-          <a
-          href="/AMANDA_ZHU.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          >
-          resume  ༘⋆
-         </a>
+          <a href="#case-studies">case studies</a>
+          <a href="#fun-work">fun work</a>
+          <a href="#about">about</a>
+          <a href="/AMANDA_ZHU.pdf" target="_blank" rel="noopener noreferrer">resume</a>
+          <a href="#contact">contact</a>
         </div>
       </div>
     </div>

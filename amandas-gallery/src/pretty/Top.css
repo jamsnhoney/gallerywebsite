@@ -58,15 +58,16 @@
 }
 
 
-.navbar a {
-  margin: 0;               /* remove default paragraph spacing */
+.navbar a,
+.nav-links a {
+  margin: 0;
+  font-family: "Lexend", sans-serif;
   font-size: 16px;
-  color: #434842;
+  color: #71776E;
   font-weight: 150;
-  cursor: pointer;         /* makes it feel clickable */
+  cursor: pointer;
   transition: color 0.3s ease;
   text-decoration: none;
-
 }
 
 .navbar a:hover {
