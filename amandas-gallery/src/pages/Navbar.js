@@ -1,15 +1,30 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "../pretty/Navbar.css";
 
 function Navbar() {
+  const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
-  const [bunnyWiggle, setBunnyWiggle] = useState(false);
   const [menuBunnyWiggle, setMenuBunnyWiggle] = useState(false);
 
-  const triggerBunnyAnimation = () => {
-    setBunnyWiggle(true);
-    setTimeout(() => setBunnyWiggle(false), 400);
+  const isHomePage = location.pathname === "/" || location.pathname === "";
+
+  const scrollToSection = (sectionId) => {
+    if (!isHomePage) return;
+    const el = document.getElementById(sectionId);
+    if (el) {
+      const y = el.getBoundingClientRect().top + window.scrollY;
+      const stickyNavOffset = 100;
+      window.scrollTo({ top: y - stickyNavOffset, behavior: "smooth" });
+    }
+  };
+
+  const handleNavClick = (e, sectionId) => {
+    setMenuOpen(false);
+    if (isHomePage) {
+      e.preventDefault();
+      setTimeout(() => scrollToSection(sectionId), 0);
+    }
   };
 
   const triggerMenuBunnyAnimation = (e) => {
@@ -49,28 +64,10 @@ function Navbar() {
       </div>
 
       <div className={`nav-links ${menuOpen ? "show" : ""}`}>
-        <a
-          href="/#case-studies"
-          onClick={(e) => {
-            setMenuOpen(false);
-            if (window.location.pathname === "/" || window.location.pathname === "") {
-              e.preventDefault();
-              document.getElementById("case-studies")?.scrollIntoView({ behavior: "smooth", block: "start" });
-            }
-          }}
-        >
+        <a href="/#case-studies" onClick={(e) => handleNavClick(e, "case-studies")}>
           case studies
         </a>
-        <a
-          href="/#fun-work"
-          onClick={(e) => {
-            setMenuOpen(false);
-            if (window.location.pathname === "/" || window.location.pathname === "") {
-              e.preventDefault();
-              document.getElementById("fun-work")?.scrollIntoView({ behavior: "smooth", block: "start" });
-            }
-          }}
-        >
+        <a href="/#fun-work" onClick={(e) => handleNavClick(e, "fun-work")}>
           fun work
         </a>
         <a href="/#about">about</a>
