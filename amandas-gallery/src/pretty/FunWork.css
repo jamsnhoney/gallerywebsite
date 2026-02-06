@@ -1,4 +1,8 @@
-.sticker-board {
+.fun-work {
+  scroll-margin-top: 100px;
+}
+
+.fun-work-board {
   position: relative;
   width: 90vw;
   height: 80vh;
@@ -7,7 +11,7 @@
   touch-action: none;
 }
 
-.sticker {
+.fun-work-sticker {
   position: absolute;
   width: auto;
   height: auto;
@@ -16,28 +20,27 @@
   user-select: none;
 }
 
-.sticker:hover {
-cursor: pointer;       
-transform: translateY(-10px); 
+.fun-work-sticker:hover {
+  cursor: pointer;
+  transform: translateY(-10px);
 }
 
-.sticker:active {
+.fun-work-sticker:active {
   cursor: grabbing;
   transform: scale(1.05);
 }
 
-.sticker.active {
+.fun-work-sticker.active {
   transform: translateY(-5px);
 }
 
-
 @media (max-width: 767px) {
-  .sticker-board {
+  .fun-work-board {
     width: 95vw;
     height: 60vh;
   }
 
-  .sticker {
+  .fun-work-sticker {
     max-width: 150px;
   }
 }

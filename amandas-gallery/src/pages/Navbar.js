@@ -49,8 +49,30 @@ function Navbar() {
       </div>
 
       <div className={`nav-links ${menuOpen ? "show" : ""}`}>
-        <a href="/#case-studies">case studies</a>
-        <a href="/#fun-work">fun work</a>
+        <a
+          href="/#case-studies"
+          onClick={(e) => {
+            setMenuOpen(false);
+            if (window.location.pathname === "/" || window.location.pathname === "") {
+              e.preventDefault();
+              document.getElementById("case-studies")?.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+          }}
+        >
+          case studies
+        </a>
+        <a
+          href="/#fun-work"
+          onClick={(e) => {
+            setMenuOpen(false);
+            if (window.location.pathname === "/" || window.location.pathname === "") {
+              e.preventDefault();
+              document.getElementById("fun-work")?.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+          }}
+        >
+          fun work
+        </a>
         <a href="/#about">about</a>
         <a href="/AMANDA_ZHU.pdf" target="_blank" rel="noopener noreferrer">resume</a>
         <Link to="/contact" onClick={() => setMenuOpen(false)}>contact</Link>

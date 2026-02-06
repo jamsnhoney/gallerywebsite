@@ -1,9 +1,9 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import "./App.css";
 
 import Navbar from "./pages/Navbar";
-import Hero from "./pages/Hero";
+import FunWork from "./pages/FunWork";
 import CaseStudies from "./components/CaseStudies";
 import CaseStudyDetail from "./pages/CaseStudyDetail";
 import Contact from "./pages/Contact";
@@ -20,10 +20,23 @@ function Layout({ children }) {
 }
 
 function HomePage() {
+  const location = useLocation();
+
+  useEffect(() => {
+    const hash = location.hash?.slice(1);
+    if (hash) {
+      const el = document.getElementById(hash);
+      if (el) {
+        const t = setTimeout(() => el.scrollIntoView({ behavior: "smooth", block: "start" }), 50);
+        return () => clearTimeout(t);
+      }
+    }
+  }, [location.pathname, location.hash]);
+
   return (
     <>
       <CaseStudies />
-      <Hero />
+      <FunWork />
     </>
   );
 }

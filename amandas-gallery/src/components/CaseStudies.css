@@ -2,6 +2,7 @@
   width: 100%;
   padding: 2rem 3vw;
   box-sizing: border-box;
+  scroll-margin-top: 100px;
 }
 
 .case-studies-grid {
