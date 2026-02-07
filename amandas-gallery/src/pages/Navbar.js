@@ -70,7 +70,7 @@ function Navbar() {
         <a href="/#fun-work" onClick={(e) => handleNavClick(e, "fun-work")}>
           fun work
         </a>
-        <a href="/#about">about</a>
+        <Link to="/about" onClick={() => setMenuOpen(false)}>about</Link>
         <a href="/AMANDA_ZHU.pdf" target="_blank" rel="noopener noreferrer">resume</a>
         <Link to="/contact" onClick={() => setMenuOpen(false)}>contact</Link>
         {/* Mobile open menu: bunny to the right of links, tap to wiggle */}

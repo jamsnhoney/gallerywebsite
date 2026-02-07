@@ -41,7 +41,7 @@ function CaseStudyDetail() {
     <main className="case-study-detail">
       <div className="case-study-detail-container">
         <aside className="case-study-toc">
-          <Link to="/" className="case-study-toc-back">← back</Link>
+          <Link to="/" className="case-study-toc-back">back</Link>
           <nav className="case-study-toc-nav">
             <a href="#overview">overview</a>
             <a href="#problem-statement">problem statement</a>

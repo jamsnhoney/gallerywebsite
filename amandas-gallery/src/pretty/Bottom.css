@@ -20,8 +20,8 @@
 .bottom-right p {
     margin: 0;              
     font-size: 16px;
-    color: #434842;
-    font-weight: 150;
+    color: #71776E;
+    font-weight: 200;
     cursor: pointer;     
     transition: color 0.3s ease;
 }

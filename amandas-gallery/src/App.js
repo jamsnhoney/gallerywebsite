@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import "./App.css";
 
@@ -7,13 +7,36 @@ import FunWork from "./pages/FunWork";
 import CaseStudies from "./components/CaseStudies";
 import CaseStudyDetail from "./pages/CaseStudyDetail";
 import Contact from "./pages/Contact";
+import About from "./pages/About";
 import Bottom from "./pages/Bottom";
 
 function Layout({ children }) {
+  const location = useLocation();
+  const [isAnimating, setIsAnimating] = useState(false);
+  const isInitialMount = useRef(true);
+
+  useEffect(() => {
+    // On initial load, animate home page
+    if (isInitialMount.current && (location.pathname === "/" || location.pathname === "")) {
+      isInitialMount.current = false;
+      setIsAnimating(true);
+      const timer = setTimeout(() => setIsAnimating(false), 400);
+      return () => clearTimeout(timer);
+    }
+    // On navigation, animate About and Contact pages
+    else if (location.pathname === "/about" || location.pathname === "/contact") {
+      setIsAnimating(true);
+      const timer = setTimeout(() => setIsAnimating(false), 400);
+      return () => clearTimeout(timer);
+    } else {
+      isInitialMount.current = false;
+    }
+  }, [location.pathname]);
+
   return (
     <div className="app-layout">
       <Navbar />
-      <div className="app-main">{children}</div>
+      <div className={`app-main ${isAnimating ? "fade-in" : ""}`}>{children}</div>
       <Bottom />
     </div>
   );
@@ -57,6 +80,14 @@ function App() {
         element={
           <Layout>
             <Contact />
+          </Layout>
+        }
+      />
+      <Route
+        path="/about"
+        element={
+          <Layout>
+            <About />
           </Layout>
         }
       />

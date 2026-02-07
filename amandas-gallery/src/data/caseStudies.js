@@ -11,6 +11,9 @@ import CaseStudy4Content from "../content/caseStudies/CaseStudy4";
 
 const wingmateImg = "/wingmate.png";
 const careerxlImg = "/careerxl.png";
+const letGetMovingImg = "/LGM.png";
+const myFavouriteProductivityAppImg = "/prod-app.png";
+
 
 const defaultMeta = {
   role: ["—"],
@@ -21,8 +24,9 @@ const defaultMeta = {
 
 export const caseStudiesData = [
   {
-    slug: "case-study-1",
-    title: "Case Study 1",
+    /* wingmate */
+    slug: "case-study-1", 
+    title: "wingmate",
     galleryTitle: "wingmate | the fresh into the world dating app",
     imageSrc: wingmateImg,
     role: ["team lead &", "product designer"],
@@ -32,6 +36,7 @@ export const caseStudiesData = [
     content: CaseStudy1Content,
   },
   {
+    /* careerxl */
     slug: "case-study-2",
     title: "Case Study 2",
     galleryTitle: "new website new brand | website audit for careerxl",
@@ -40,18 +45,20 @@ export const caseStudiesData = [
     content: CaseStudy2Content,
   },
   {
+    /* let's get moving */
     slug: "case-study-3",
-    title: "Case Study 3",
+    title: "let's get moving",
     galleryTitle: "let's get moving | graphic and website design",
-    imageSrc: wingmateImg,
+    imageSrc: letGetMovingImg,
     ...defaultMeta,
     content: CaseStudy3Content,
   },
   {
+    /* peak productivity */
     slug: "case-study-4",
-    title: "Case Study 4",
+    title: "peak productivity",
     galleryTitle: "my favourite productivity app | ux research",
-    imageSrc: wingmateImg,
+    imageSrc: myFavouriteProductivityAppImg,
     ...defaultMeta,
     content: CaseStudy4Content,
   },

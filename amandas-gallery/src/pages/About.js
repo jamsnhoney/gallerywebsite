@@ -1,0 +1,90 @@
+import React, { useEffect, useState } from "react";
+import "../pretty/About.css";
+
+import img1 from '../assets/aboutphotos/aboutme1.png';
+import img2 from '../assets/aboutphotos/aboutme2.png';
+import img3 from '../assets/aboutphotos/aboutme3.png';
+import img4 from '../assets/aboutphotos/aboutme4.png';
+import img5 from '../assets/aboutphotos/aboutme5.png';
+import img6 from '../assets/aboutphotos/aboutme6.png';
+import img7 from '../assets/aboutphotos/aboutme7.png';
+import img8 from '../assets/aboutphotos/aboutme8.png';
+import img9 from '../assets/aboutphotos/aboutme9.png';
+import img10 from '../assets/aboutphotos/aboutme10.png';
+import img11 from '../assets/aboutphotos/aboutme11.png';
+import img12 from '../assets/aboutphotos/aboutme12.png';
+import img13 from '../assets/aboutphotos/aboutme13.png';
+import img14 from '../assets/aboutphotos/aboutme14.png';
+import img15 from '../assets/aboutphotos/aboutme15.png';
+import img16 from '../assets/aboutphotos/aboutme16.png';
+
+function About() {
+  const [visibleImages, setVisibleImages] = useState([]);
+
+  useEffect(() => {
+    // Staggered fade-in animation for gallery images
+    const imageCount = 16;
+    const staggerDelay = 50; // 50ms delay between each image
+    
+    const timers = [];
+    for (let i = 0; i < imageCount; i++) {
+      const timer = setTimeout(() => {
+        setVisibleImages((prev) => [...prev, i]);
+      }, i * staggerDelay);
+      timers.push(timer);
+    }
+
+    return () => {
+      timers.forEach((timer) => clearTimeout(timer));
+    };
+  }, []);
+
+  // Array of imported images in the specified order (left to right, top to bottom)
+  const images = [
+    img5, img15, img14, img3, img2, img4, img1, img8,
+    img7, img6, img9, img10, img11, img12, img13, img16
+  ];
+
+  return (
+    <main className="about-page">
+      <div className="about-container">
+        <div className="about-header-section">
+          <h1 className="about-header">hello there .ᐟ </h1>
+          <p className="about-location"> 𓅰 i'm a ui/ux/graphic designer breaking into product design 𓄲 based in toronto ✈︎</p>
+        </div>
+        <div className="about-items">
+          <div className="about-item">
+            <span className="about-label">the journey</span>
+            <span className="about-content">i discovered ui/ux design in my third year at university, and despite being in a biomedical computing program, decided to full send into my passion for all things design. taking human-computer interaction courses and self-learning graphic/ui/ux, it's become work that doesn't feel like work. 𓅰 𓅭 𓅮 𓅯 </span>
+          </div>
+          <div className="about-item">
+            <span className="about-label">where i'm at</span>
+            <span className="about-content"> i'm currently in my last year of study at queen's university, making the most out of it as severe senioritis tanks my gpa. i'm super enjoying club life, co-chair of queen's ux club (qux), graphic design for queen's women in computing (qwic), dancing with my homies in ccdc (casually cool dance club), and building with the gang at id8.  </span>
+          </div>
+          <div className="about-item">
+            <span className="about-label">you'll find me</span>
+            <span className="about-content"> outside of work, dancing (choreo/jazzfunk) with my friends, playing piano, doodling, and making mini creative projects on the side. i post some of these projects on my instagram @a_zoo_studio ⛇☃︎ </span>
+          </div>
+        </div>
+        <div className="about-gallery">
+          {Array.from({ length: 16 }, (_, index) => (
+            <div
+              key={index}
+              className={`about-gallery-item ${
+                visibleImages.includes(index) ? "fade-in-visible" : ""
+              }`}
+            >
+              <img
+                src={images[index]}
+                alt={`Gallery image ${index + 1}`}
+                className="about-gallery-image"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </main>
+  );
+}
+
+export default About;
