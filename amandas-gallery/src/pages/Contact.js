@@ -6,7 +6,7 @@ function Contact() {
     <main className="contact-page">
       <div className="contact-container">
         <div className="contact-header-section">
-          <h1 className="contact-header">helloooo! let's connect.</h1>
+          <h1 className="contact-header">hey.ᐟ  let's connect.</h1>
           {/* <p className="contact-location">i'm based in Toronto, ON. say hi!</p> */}
         </div>
         <div className="contact-items">

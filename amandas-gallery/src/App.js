@@ -14,6 +14,16 @@ function Layout({ children }) {
   const location = useLocation();
   const [isAnimating, setIsAnimating] = useState(false);
   const isInitialMount = useRef(true);
+  const prevPathname = useRef(location.pathname);
+
+  // Scroll to top when navigating to About or Contact pages
+  useEffect(() => {
+    if ((location.pathname === "/about" || location.pathname === "/contact") && 
+        prevPathname.current !== location.pathname) {
+      window.scrollTo(0, 0);
+    }
+    prevPathname.current = location.pathname;
+  }, [location.pathname]);
 
   useEffect(() => {
     // On initial load, animate home page

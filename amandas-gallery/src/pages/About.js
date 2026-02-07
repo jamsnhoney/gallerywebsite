@@ -50,12 +50,12 @@ function About() {
       <div className="about-container">
         <div className="about-header-section">
           <h1 className="about-header">hello there .ᐟ </h1>
-          <p className="about-location"> 𓅰 i'm a ui/ux/graphic designer breaking into product design 𓄲 based in toronto ✈︎</p>
+          <p className="about-location"> based in toronto ✈︎ i'm a ui/ux/graphic designer breaking into product design 𓅰 </p>
         </div>
         <div className="about-items">
           <div className="about-item">
             <span className="about-label">the journey</span>
-            <span className="about-content">i discovered ui/ux design in my third year at university, and despite being in a biomedical computing program, decided to full send into my passion for all things design. taking human-computer interaction courses and self-learning graphic/ui/ux, it's become work that doesn't feel like work. 𓅰 𓅭 𓅮 𓅯 </span>
+            <span className="about-content">despite being studying a undergraduate biomedical computing program, i've decided to full send into my passion for all things design. taking human-computer interaction courses and self-learning graphic/ui/ux design, it's become work that doesn't feel like work. 𓅰 𓅭 𓅮 𓅯 </span>
           </div>
           <div className="about-item">
             <span className="about-label">where i'm at</span>
@@ -63,7 +63,7 @@ function About() {
           </div>
           <div className="about-item">
             <span className="about-label">you'll find me</span>
-            <span className="about-content"> outside of work, dancing (choreo/jazzfunk) with my friends, playing piano, doodling, and making mini creative projects on the side. i post some of these projects on my instagram @a_zoo_studio ⛇☃︎ </span>
+            <span className="about-content"> playing piano, dancing (choreo/jazzfunk) with my friends, journaling, and making mini creative projects on the side. i post some of these projects on my instagram @a_zoo_studio ⛇☃︎ </span>
           </div>
         </div>
         <div className="about-gallery">

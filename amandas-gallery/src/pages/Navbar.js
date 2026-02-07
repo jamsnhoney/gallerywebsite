@@ -38,9 +38,9 @@ function Navbar() {
       <Link to="/" className="hello-link">
         <div className="hello">
           <div className="title">
-            <h1>amanda zhu </h1>
+            <h1> amanda zhu </h1>
           </div>
-          <p>ui/ux/graphic designer breaking into product design. </p>
+          <p>ui/ux/graphic designer breaking into product design ⭑ .ᐟ </p>
         </div>
       </Link>
 
