@@ -1,5 +1,5 @@
 /**
- * Case Study 2 – page content
+ * Case Study 2 – CAREERXL
  * Edit overview, problemStatement, userResearch, marketResearch, etc. here.
  */
 

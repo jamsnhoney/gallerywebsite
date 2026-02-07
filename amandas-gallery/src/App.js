@@ -16,9 +16,9 @@ function Layout({ children }) {
   const isInitialMount = useRef(true);
   const prevPathname = useRef(location.pathname);
 
-  // Scroll to top when navigating to About or Contact pages
+  // Scroll to top when navigating to About, Contact, or Case Study pages
   useEffect(() => {
-    if ((location.pathname === "/about" || location.pathname === "/contact") && 
+    if ((location.pathname === "/about" || location.pathname === "/contact" || location.pathname.startsWith("/case-study/")) && 
         prevPathname.current !== location.pathname) {
       window.scrollTo(0, 0);
     }
@@ -33,8 +33,8 @@ function Layout({ children }) {
       const timer = setTimeout(() => setIsAnimating(false), 400);
       return () => clearTimeout(timer);
     }
-    // On navigation, animate About and Contact pages
-    else if (location.pathname === "/about" || location.pathname === "/contact") {
+    // On navigation, animate About, Contact, and Case Study pages
+    else if (location.pathname === "/about" || location.pathname === "/contact" || location.pathname.startsWith("/case-study/")) {
       setIsAnimating(true);
       const timer = setTimeout(() => setIsAnimating(false), 400);
       return () => clearTimeout(timer);

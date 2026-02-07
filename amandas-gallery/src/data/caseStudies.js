@@ -38,7 +38,7 @@ export const caseStudiesData = [
   {
     /* careerxl */
     slug: "case-study-2",
-    title: "Case Study 2",
+    title: "careerxl",
     galleryTitle: "new website new brand | website audit for careerxl",
     imageSrc: careerxlImg,
     ...defaultMeta,

@@ -1,14 +1,14 @@
 import React, { useState, useRef, useEffect } from "react";
-import img1 from '../assets/1-qwicmerch.png';
-import img2 from '../assets/2-resumeworkshop.png';
-import img3 from '../assets/3-abighead.png';
-import img4 from '../assets/4-coffeechat.png';
-import img5 from '../assets/5-laylow.png';
-import img6 from '../assets/6-creativemode.png';
-import img7 from '../assets/7-qwicfolders.png';
-import img8 from '../assets/8-qwicbunny.png';
-import img9 from '../assets/qux-sticker.png';
-import img10 from '../assets/qux-whatis.png';
+import img1 from '../assets/stickers/1-qwicmerch.png';
+import img2 from '../assets/stickers/2-resumeworkshop.png';
+import img3 from '../assets/stickers/3-abighead.png';
+import img4 from '../assets/stickers/4-coffeechat.png';
+import img5 from '../assets/stickers/5-laylow.png';
+import img6 from '../assets/stickers/6-creativemode.png';
+import img7 from '../assets/stickers/7-qwicfolders.png';
+import img8 from '../assets/stickers/8-qwicbunny.png';
+import img9 from '../assets/stickers/qux-sticker.png';
+import img10 from '../assets/stickers/qux-whatis.png';
 import '../pretty/FunWork.css';
 
 const stickers = [

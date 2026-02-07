@@ -76,7 +76,7 @@ function About() {
             >
               <img
                 src={images[index]}
-                alt={`Gallery image ${index + 1}`}
+                alt="something in my camera roll"
                 className="about-gallery-image"
               />
             </div>
