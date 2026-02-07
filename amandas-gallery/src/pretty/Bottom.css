@@ -50,9 +50,10 @@
 @media (max-width: 767px) {
 
     .bottom-left p {
-    font-size: 12px;
+    display: none;
+
   }
     .bottom-right p {
-    font-size: 12px;
+    font-size: 16px;
   }
 }
