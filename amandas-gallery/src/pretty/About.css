@@ -59,6 +59,13 @@
   flex-shrink: 0;
 }
 
+@media (min-width: 768px) {
+  .about-label {
+    width: 110px;
+    min-width: 110px;
+  }
+}
+
 .about-content {
   font-family: "Lexend", sans-serif;
   font-size: 16px;

@@ -40,7 +40,10 @@ function Navbar() {
           <div className="title">
             <h1> amanda zhu </h1>
           </div>
-          <p>ui/ux/graphic designer breaking into product design ⭑ .ᐟ </p>
+          <p>
+            <span className="caption-desktop">ui/ux/graphic designer breaking into product design .ᐟ </span>
+            <span className="caption-mobile">ui/ux/graphic ⇆ product design .ᐟ</span>
+          </p>
         </div>
       </Link>
 

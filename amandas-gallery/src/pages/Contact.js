@@ -6,7 +6,7 @@ function Contact() {
     <main className="contact-page">
       <div className="contact-container">
         <div className="contact-header-section">
-          <h1 className="contact-header">hey.ᐟ  let's connect.</h1>
+          <h1 className="contact-header">hey.ᐟ  let's connect ⛇☃︎</h1>
           {/* <p className="contact-location">i'm based in Toronto, ON. say hi!</p> */}
         </div>
         <div className="contact-items">
@@ -37,6 +37,17 @@ function Contact() {
             </a>
           </div>
           <div className="contact-item">
+            <span className="contact-label">twitter x</span>
+            <a
+              href="https://x.com/amsamszhuzhu"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-link"
+            >
+              @amsamszhuzhu
+            </a>
+          </div>
+          <div className="contact-item">
             <span className="contact-label">a good time</span>
             <a
               href="https://www.youtube.com/watch?v=V7KjHLRGdrc"
@@ -44,7 +55,7 @@ function Contact() {
               rel="noopener noreferrer"
               className="contact-link"
             >
-              𓆟 𓆞 ᶜˡᶦᶜᵏ ᵐᵉ 𓆝 𓆟
+              trust-me-bro
             </a>
           </div>
         </div>

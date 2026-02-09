@@ -49,21 +49,21 @@ function About() {
     <main className="about-page">
       <div className="about-container">
         <div className="about-header-section">
-          <h1 className="about-header">hello there .ᐟ </h1>
-          <p className="about-location"> based in toronto ✈︎ i'm a ui/ux/graphic designer breaking into product design 𓅰 </p>
+          <h1 className="about-header">hello .ᐟ</h1>
+          <p className="about-location"> based in toronto ✈︎ i'm amanada, a ui/ux/graphic designer breaking into product design. </p>
         </div>
         <div className="about-items">
           <div className="about-item">
             <span className="about-label">the journey</span>
-            <span className="about-content">despite being studying a undergraduate biomedical computing program, i've decided to full send into my passion for all things design. taking human-computer interaction courses and self-learning graphic/ui/ux design, it's become work that doesn't feel like work. 𓅰 𓅭 𓅮 𓅯 </span>
+            <span className="about-content">despite studying a undergraduate biomedical computing program, i've decided to full send into my passion for all things design. taking human-computer interaction courses and self-learning graphic/ui/ux design, it's become work that doesn't feel like work. 𓅰 𓅭 𓅮 𓅯 </span>
           </div>
           <div className="about-item">
             <span className="about-label">where i'm at</span>
-            <span className="about-content"> i'm currently in my last year of study at queen's university, making the most out of it as severe senioritis tanks my gpa. i'm super enjoying club life, co-chair of queen's ux club (qux), graphic design for queen's women in computing (qwic), dancing with my homies in ccdc (casually cool dance club), and building with the gang at id8.  </span>
+            <span className="about-content"> i'm in my last year of studying biomedical computing at queen's university, making the most out of it as severe senioritis tanks my gpa. i'm enjoying the univeristy club life, as co-founder/chair of @queens.ux club, graphic designer for queen's women in computing (@queenswic), dancing with my @casuallycooldanceteam in ccdc, and building projects at @id8id8id8.  </span>
           </div>
           <div className="about-item">
             <span className="about-label">you'll find me</span>
-            <span className="about-content"> playing piano, dancing (choreo/jazzfunk) with my friends, journaling, and making mini creative projects on the side. i post some of these projects on my instagram @a_zoo_studio ⛇☃︎ </span>
+            <span className="about-content"> playing piano, in the dance studio with friends, journaling, and making mini creative projects on the side. i post some of these projects on my instagram @a_zoo_studio </span>
           </div>
         </div>
         <div className="about-gallery">

@@ -68,8 +68,9 @@ function HomePage() {
 
   return (
     <>
+          <FunWork />
       <CaseStudies />
-      <FunWork />
+
     </>
   );
 }
