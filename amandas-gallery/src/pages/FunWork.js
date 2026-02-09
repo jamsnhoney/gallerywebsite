@@ -9,11 +9,13 @@ import img7 from '../assets/stickers/7-qwicfolders.png';
 import img8 from '../assets/stickers/8-qwicbunny.png';
 import img9 from '../assets/stickers/qux-sticker.png';
 import img10 from '../assets/stickers/qux-whatis.png';
+import img11 from '../assets/stickers/id8-poster.png';
 import '../pretty/FunWork.css';
 
 const stickers = [
   { id: 1, src: img1, top: 0.1, left: 0.06 },
   { id: 2, src: img2, top: 0.05, left: 0.35 },
+  { id: 11, src: img11, top: 0.4, left: 0.06 },
   { id: 3, src: img3, top: 0.20, left: 0.55 },
   { id: 4, src: img4, top: 0.5, left: 0.4 },
   { id: 5, src: img5, top: 0.48, left: 0.2 },

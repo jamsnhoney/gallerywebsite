@@ -50,12 +50,12 @@ function About() {
       <div className="about-container">
         <div className="about-header-section">
           <h1 className="about-header">hello .ᐟ</h1>
-          <p className="about-location"> based in toronto ✈︎ i'm amanada, a ui/ux/graphic designer breaking into product design. </p>
+          <p className="about-location"> based in toronto ✈︎ i'm amanda, a ui/ux/graphic designer breaking into product design. </p>
         </div>
         <div className="about-items">
           <div className="about-item">
             <span className="about-label">the journey</span>
-            <span className="about-content">despite studying a undergraduate biomedical computing program, i've decided to full send into my passion for all things design. taking human-computer interaction courses and self-learning graphic/ui/ux design, it's become work that doesn't feel like work. 𓅰 𓅭 𓅮 𓅯 </span>
+            <span className="about-content">i love all things design. through human–computer interaction courses and self-driven learning in graphic/website design, i focus on building thoughtful, human-centered experiences that help people and make everyday moments a little better. 𓅰 𓅭 𓅮 𓅯 </span>
           </div>
           <div className="about-item">
             <span className="about-label">where i'm at</span>
