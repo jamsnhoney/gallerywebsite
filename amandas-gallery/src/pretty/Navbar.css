@@ -103,11 +103,6 @@
   text-decoration: none;
 }
 
-.navbar a:hover {
-  color: #9cba7c;          /* subtle hover color */
-  transition: color 0.3s ease;
-}
-
 /* hamburger icon — two lines */
 .hamburger {
   display: none;
@@ -172,14 +167,14 @@
   animation: bunny-wiggle-menu 0.4s ease-in-out;
 }
 
-@media (min-width: 768px) { 
+@media (min-width: 768px) {
   .navbar-bunny-desktop {
     display: block;
     position: absolute;
-    left: 47%;
-    bottom: -10px;
+    left: 56%; /* 31% to be right beside left text, 46% to be beside navbar */
+    bottom: -15px;
     transform: translateX(-50%);
-    height: 70px;
+    height: 80px;
     width: auto;
     pointer-events: auto;
     z-index: 0;
@@ -188,6 +183,56 @@
 
   .navbar-bunny-desktop:hover {
     transform: translateX(-50%) rotate(10deg);
+  }
+}
+
+/* Tablet/iPad: mobile branding (amanda zhu + caption) + visible nav with smaller text */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .title h1 {
+    font-size: 32px;
+    white-space: nowrap;
+    padding-left: 2vw;
+  }
+
+  .hello p {
+    font-size: 16px;
+    padding-left: 2vw;
+  }
+
+  .caption-desktop {
+    display: none;
+  }
+
+  .caption-mobile {
+    display: inline;
+  }
+
+  .navbar-bunny-desktop {
+    display: none;
+  }
+
+  .nav-links {
+    gap: 1.5rem;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+    padding-top: 3vh;
+  }
+}
+
+/* Desktop only: navbar link hover (match Bottom.css) */
+@media (min-width: 1024px) {
+  .nav-links a:hover {
+    color: #9cba7c;
+    transition: color 0.3s ease;
   }
 }
 

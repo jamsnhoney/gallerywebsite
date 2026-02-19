@@ -41,8 +41,8 @@ function Navbar() {
             <h1> amanda zhu </h1>
           </div>
           <p>
-            <span className="caption-desktop">ui/ux/graphic designer breaking into product design .ᐟ </span>
-            <span className="caption-mobile">ui/ux/graphic ⇆ product design .ᐟ</span>
+            <span className="caption-desktop">graphic/ui/ux designer of products that feel natural .ᐟ </span>
+            <span className="caption-mobile">graphic ⇆ ui/ux designer .ᐟ</span>
           </p>
         </div>
       </Link>
@@ -74,7 +74,6 @@ function Navbar() {
           fun work
         </a>
         <Link to="/about" onClick={() => setMenuOpen(false)}>about</Link>
-        <a href="/AMANDA_ZHU.pdf" target="_blank" rel="noopener noreferrer">resume</a>
         <Link to="/contact" onClick={() => setMenuOpen(false)}>contact</Link>
         {/* Mobile open menu: bunny to the right of links, tap to wiggle */}
         <img

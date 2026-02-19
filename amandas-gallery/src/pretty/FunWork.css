@@ -34,6 +34,17 @@
   transform: translateY(-5px);
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  .fun-work-board {
+    width: 90vw;
+    height: 70vh;
+  }
+
+  .fun-work-sticker {
+    max-width: 180px;
+  }
+}
+
 @media (max-width: 767px) {
   .fun-work-board {
     width: 95vw;

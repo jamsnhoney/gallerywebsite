@@ -26,18 +26,18 @@ function Contact() {
             </a>
           </div>
           <div className="contact-item">
-            <span className="contact-label">linkedin</span>
+            <span className="contact-label">linkedin ⛾</span>
             <a
               href="https://www.linkedin.com/in/amanda-zhu-b01422242/"
               target="_blank"
               rel="noopener noreferrer"
               className="contact-link"
             >
-              amanda-zhu ⛾
+              amanda-zhu 
             </a>
           </div>
           <div className="contact-item">
-            <span className="contact-label">twitter x</span>
+            <span className="contact-label">x/twitter</span>
             <a
               href="https://x.com/amsamszhuzhu"
               target="_blank"
@@ -48,6 +48,17 @@ function Contact() {
             </a>
           </div>
           <div className="contact-item">
+            <span className="contact-label">resume</span>
+            <a
+              href="/AMANDA_ZHU.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-link"
+            >
+              amanda_zhu.pdf
+            </a>
+          </div>
+          <div className="contact-item">
             <span className="contact-label">a good time</span>
             <a
               href="https://www.youtube.com/watch?v=V7KjHLRGdrc"
@@ -55,7 +66,7 @@ function Contact() {
               rel="noopener noreferrer"
               className="contact-link"
             >
-              trust-me-bro
+              [trust]⋆˚꩜｡
             </a>
           </div>
         </div>
