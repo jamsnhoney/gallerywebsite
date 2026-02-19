@@ -50,20 +50,22 @@ function About() {
       <div className="about-container">
         <div className="about-header-section">
           <h1 className="about-header">hello .ᐟ</h1>
-          <p className="about-location"> i'm amanda, ui/ux/graphic designer based in toronto ✈︎ </p>
+          <p className="about-location"> i'm amanda, ui/ux designer based in toronto ✈︎ </p>
         </div>
         <div className="about-items">
           <div className="about-item">
             <span className="about-label">the journey</span>
-            <span className="about-content">i love all things design. through taking human–computer interaction courses and self-driven learning in graphic/website design, i focus on building fun, user-centered products that help people and make everyday moments a little better. 𓅰 𓅭 𓅮 𓅯 </span>
+            <span className="about-content">i love all things design.
+                                            between human–computer interaction courses and self-driven learning in graphic/website design,
+                                            i found work that doesn't feel like work 𓅰 𓅭 𓅮 𓅯 </span>
           </div>
           <div className="about-item">
             <span className="about-label">where i'm at</span>
-            <span className="about-content"> i'm in my last year of studying computer science at queen's university, making the most out school club life: co-founder & chair of @queens.ux club, graphic designer for @queenswic, dancing with my @casuallycooldanceteam, and building projects at @id8id8id8.  </span>
+            <span className="about-content"> i'm in my last year of studying computer science at queen's university, making the most out school club life at @queens.ux club, @queenswic, @casuallycooldanceteam & @id8id8id8.  </span>
           </div>
           <div className="about-item">
             <span className="about-label">you'll find me</span>
-            <span className="about-content"> playing piano, in the dance studio with friends, journaling, and making mini creative projects on the side. i post some of these projects on my instagram @a_zoo_studio. </span>
+            <span className="about-content"> playing piano, in the dance studio with friends, journaling, & making mini creative side projects.</span>
           </div>
         </div>
         <div className="about-gallery">
