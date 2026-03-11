@@ -10,7 +10,6 @@ import CaseStudy3Content from "../content/caseStudies/CaseStudy3";
 import CaseStudy4Content from "../content/caseStudies/CaseStudy4";
 
 const wingmateImg = "/wingmate.png";
-const careerxlImg = "/careerxl.png";
 const mosmImg = "/case2-mosm.png";
 const letGetMovingImg = "/LGM.png";
 const myFavouriteProductivityAppImg = "/prod-app.png";

@@ -172,6 +172,18 @@
   border-radius: 8px;
 }
 
+.case-study-section-video-wrapper {
+  margin-top: 1.5rem;
+}
+
+.case-study-section-video {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
 .case-study-pdf-section {
   margin-bottom: 3rem;
 }

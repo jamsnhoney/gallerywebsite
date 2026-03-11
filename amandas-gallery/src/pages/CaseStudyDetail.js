@@ -3,6 +3,9 @@ import { useParams, Link } from "react-router-dom";
 import { getCaseStudyBySlug } from "../data/caseStudies";
 import "../pretty/CaseStudyDetail.css";
 import mosmLogo from "../assets/mosm/mosm-logo.png";
+import wingmateProposalPdf from "../assets/wingmate/Group25_Proposal (1).pdf";
+import wingmateIllustration from "../assets/wingmate/wingmate-illustration.svg";
+import wingmateLofiTimelapse from "../assets/wingmate/lofi-timelapse.mov";
 
 function SectionContent({ content }) {
   if (content == null) {
@@ -38,6 +41,7 @@ function CaseStudyDetail() {
 
   const { title, imageSrc, role = [], team = [], skills = [], timeline = [] } = caseStudy;
   const isMosmCaseStudy = slug === "case-study-2";
+  const isWingmateCaseStudy = slug === "case-study-1";
 
   return (
     <main className="case-study-detail">
@@ -48,6 +52,7 @@ function CaseStudyDetail() {
             <a href="#overview">overview</a>
             {!isMosmCaseStudy && <a href="#problem-statement">problem statement</a>}
             <a href="#user-research">user research</a>
+            {isWingmateCaseStudy && <a href="#low-fi-paper-prototyping">low-fi paper prototyping</a>}
             <a href="#market-research">market research</a>
             <a href="#design-process">the design process</a>
             <a href="#final-designs">final designs</a>
@@ -111,17 +116,49 @@ function CaseStudyDetail() {
                 <SectionContent content={content?.problemStatement} />
               </>
             )}
+            {isWingmateCaseStudy && (
+              <div className="case-study-section-image-wrapper">
+                <img
+                  src={wingmateIllustration}
+                  alt="WingMate illustration"
+                  className="case-study-section-image"
+                />
+              </div>
+            )}
           </div>
           {!isMosmCaseStudy && (
             <div id="problem-statement" className="case-study-section">
               <h2>problem statement</h2>
               <SectionContent content={content?.problemStatement} />
+              {isWingmateCaseStudy && (
+                <div className="case-study-pdf-wrapper">
+                  <iframe
+                    src={`${wingmateProposalPdf}#view=FitH`}
+                    title="WingMate proposal PDF"
+                    className="case-study-pdf-frame"
+                  />
+                </div>
+              )}
             </div>
           )}
           <div id="user-research" className="case-study-section">
             <h2>user research</h2>
             <SectionContent content={content?.userResearch} />
           </div>
+          {isWingmateCaseStudy && (
+            <div id="low-fi-paper-prototyping" className="case-study-section">
+              <h2>low-fi paper prototyping</h2>
+              <SectionContent content={content?.lowFiPaperPrototyping} />
+              <div className="case-study-section-video-wrapper">
+                <video
+                  className="case-study-section-video"
+                  src={wingmateLofiTimelapse}
+                  controls
+                  playsInline
+                />
+              </div>
+            </div>
+          )}
           <div id="market-research" className="case-study-section">
             <h2>market research</h2>
             <SectionContent content={content?.marketResearch} />
