@@ -11,6 +11,7 @@ import CaseStudy4Content from "../content/caseStudies/CaseStudy4";
 
 const wingmateImg = "/wingmate.png";
 const careerxlImg = "/careerxl.png";
+const mosmImg = "/case2-mosm.png";
 const letGetMovingImg = "/LGM.png";
 const myFavouriteProductivityAppImg = "/prod-app.png";
 
@@ -26,7 +27,7 @@ export const caseStudiesData = [
   {
     /* wingmate */
     slug: "case-study-1", 
-    title: "wingmate",
+    title: "WingMate",
     galleryTitle: "wingmate | the fresh into the world dating app",
     imageSrc: wingmateImg,
     role: ["team lead &", "product designer"],
@@ -36,12 +37,15 @@ export const caseStudiesData = [
     content: CaseStudy1Content,
   },
   {
-    /* careerxl */
+    /* MOSM */
     slug: "case-study-2",
-    title: "careerxl",
-    galleryTitle: "new website new brand | website audit for careerxl",
-    imageSrc: careerxlImg,
-    ...defaultMeta,
+    title: "MOSM's branding & website design",
+    galleryTitle: "modularosm | branding system & landing page design",
+    imageSrc: mosmImg,
+    role: ["brand designer &", "ui ux designer (web design)"],
+    team: ["just me! (solo case competition)"],
+    skills: ["graphic design", "ui/ux design"],
+    timeline: ["feb - march 2026"],
     content: CaseStudy2Content,
   },
   {

@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./CaseStudies.css";
 import { caseStudiesData } from "../data/caseStudies";
+import mosmVideo from "../assets/mosm/MOSM-vid.mp4";
 
 function CaseStudies({ items = caseStudiesData }) {
   return (
@@ -11,7 +12,16 @@ function CaseStudies({ items = caseStudiesData }) {
           <article key={item.slug} className="case-study-card">
             <Link to={`/case-study/${item.slug}`} className="case-study-card-link">
               <div className="case-study-media">
-                {item.videoUrl ? (
+                {item.slug === "case-study-2" ? (
+                  <video
+                    src={mosmVideo}
+                    className="case-study-thumbnail"
+                    muted
+                    loop
+                    autoPlay
+                    playsInline
+                  />
+                ) : item.videoUrl ? (
                   <span className="case-study-media-inner">
                     <img
                       src={item.videoThumbnail || item.imageSrc}

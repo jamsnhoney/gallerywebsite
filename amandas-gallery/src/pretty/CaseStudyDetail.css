@@ -161,6 +161,41 @@
   line-height: 1.6;
 }
 
+.case-study-section-image-wrapper {
+  margin-top: 1.5rem;
+}
+
+.case-study-section-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.case-study-pdf-section {
+  margin-bottom: 3rem;
+}
+
+.case-study-pdf-wrapper {
+  margin-top: 1.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f0f0f0;
+}
+
+.case-study-pdf-frame {
+  width: 100%;
+  height: 600px;
+  border: none;
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .case-study-pdf-frame {
+    height: 400px;
+  }
+}
+
 .case-study-placeholder {
   color: #71776E;
   opacity: 0.8;

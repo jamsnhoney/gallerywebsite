@@ -2,6 +2,7 @@ import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { getCaseStudyBySlug } from "../data/caseStudies";
 import "../pretty/CaseStudyDetail.css";
+import mosmLogo from "../assets/mosm/mosm-logo.png";
 
 function SectionContent({ content }) {
   if (content == null) {
@@ -36,6 +37,7 @@ function CaseStudyDetail() {
   }
 
   const { title, imageSrc, role = [], team = [], skills = [], timeline = [] } = caseStudy;
+  const isMosmCaseStudy = slug === "case-study-2";
 
   return (
     <main className="case-study-detail">
@@ -44,7 +46,7 @@ function CaseStudyDetail() {
           <Link to="/" className="case-study-toc-back">back</Link>
           <nav className="case-study-toc-nav">
             <a href="#overview">overview</a>
-            <a href="#problem-statement">problem statement</a>
+            {!isMosmCaseStudy && <a href="#problem-statement">problem statement</a>}
             <a href="#user-research">user research</a>
             <a href="#market-research">market research</a>
             <a href="#design-process">the design process</a>
@@ -100,11 +102,22 @@ function CaseStudyDetail() {
           <div id="overview" className="case-study-section">
             <h2>overview</h2>
             <SectionContent content={content?.overview} />
+            {isMosmCaseStudy && (
+              <>
+                <div className="case-study-section-image-wrapper">
+                  <img src={mosmLogo} alt="MOSM logo" className="case-study-section-image" />
+                </div>
+                <br />
+                <SectionContent content={content?.problemStatement} />
+              </>
+            )}
           </div>
-          <div id="problem-statement" className="case-study-section">
-            <h2>problem statement</h2>
-            <SectionContent content={content?.problemStatement} />
-          </div>
+          {!isMosmCaseStudy && (
+            <div id="problem-statement" className="case-study-section">
+              <h2>problem statement</h2>
+              <SectionContent content={content?.problemStatement} />
+            </div>
+          )}
           <div id="user-research" className="case-study-section">
             <h2>user research</h2>
             <SectionContent content={content?.userResearch} />
@@ -116,11 +129,33 @@ function CaseStudyDetail() {
           <div id="design-process" className="case-study-section">
             <h2>the design process</h2>
             <SectionContent content={content?.designProcess} />
+            {imageSrc && (
+              <div className="case-study-section-image-wrapper">
+                <img src={imageSrc} alt="" className="case-study-section-image" />
+              </div>
+            )}
           </div>
           <div id="final-designs" className="case-study-section">
             <h2>final designs</h2>
             <SectionContent content={content?.finalDesigns} />
+            {imageSrc && (
+              <div className="case-study-section-image-wrapper">
+                <img src={imageSrc} alt="" className="case-study-section-image" />
+              </div>
+            )}
           </div>
+          {isMosmCaseStudy && (
+            <div className="case-study-section case-study-pdf-section">
+              <h2>branding system deck</h2>
+              <div className="case-study-pdf-wrapper">
+                <iframe
+                  src="/mosm-branding-system.pdf#view=FitH"
+                  title="MOSM branding system PDF"
+                  className="case-study-pdf-frame"
+                />
+              </div>
+            </div>
+          )}
           <div id="reflections" className="case-study-section">
             <h2>reflections</h2>
             <SectionContent content={content?.reflections} />
