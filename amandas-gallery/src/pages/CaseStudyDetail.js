@@ -43,6 +43,10 @@ function CaseStudyDetail() {
   const isMosmCaseStudy = slug === "case-study-2";
   const isWingmateCaseStudy = slug === "case-study-1";
 
+  const wingmateFigmaUrl =
+    "https://www.figma.com/design/JkSyit1zmLEDjjIqobgUi7/MOSM--uwux-origin-?node-id=0-1&t=1T3uqA0nG7dJCSFy-0";
+  const figmaEmbedUrl = `https://www.figma.com/embed?embed_host=share&url=${encodeURIComponent(wingmateFigmaUrl)}`;
+
   return (
     <main className="case-study-detail">
       <div className="case-study-detail-container">
@@ -53,9 +57,9 @@ function CaseStudyDetail() {
             {!isMosmCaseStudy && <a href="#problem-statement">problem statement</a>}
             <a href="#user-research">user research</a>
             {isWingmateCaseStudy && <a href="#low-fi-paper-prototyping">low-fi paper prototyping</a>}
-            <a href="#market-research">market research</a>
+            {!isWingmateCaseStudy && <a href="#market-research">market research</a>}
             <a href="#design-process">the design process</a>
-            <a href="#final-designs">final designs</a>
+            <a href="#final-designs">high-fi designs</a>
             <a href="#reflections">reflections</a>
           </nav>
         </aside>
@@ -159,10 +163,12 @@ function CaseStudyDetail() {
               </div>
             </div>
           )}
-          <div id="market-research" className="case-study-section">
-            <h2>market research</h2>
-            <SectionContent content={content?.marketResearch} />
-          </div>
+          {!isWingmateCaseStudy && (
+            <div id="market-research" className="case-study-section">
+              <h2>market research</h2>
+              <SectionContent content={content?.marketResearch} />
+            </div>
+          )}
           <div id="design-process" className="case-study-section">
             <h2>the design process</h2>
             <SectionContent content={content?.designProcess} />
@@ -173,12 +179,23 @@ function CaseStudyDetail() {
             )}
           </div>
           <div id="final-designs" className="case-study-section">
-            <h2>final designs</h2>
+            <h2>high-fi designs</h2>
             <SectionContent content={content?.finalDesigns} />
-            {imageSrc && (
-              <div className="case-study-section-image-wrapper">
-                <img src={imageSrc} alt="" className="case-study-section-image" />
+            {isWingmateCaseStudy ? (
+              <div className="case-study-pdf-wrapper">
+                <iframe
+                  src={figmaEmbedUrl}
+                  title="WingMate Figma designs"
+                  className="case-study-pdf-frame"
+                  allowFullScreen
+                />
               </div>
+            ) : (
+              imageSrc && (
+                <div className="case-study-section-image-wrapper">
+                  <img src={imageSrc} alt="" className="case-study-section-image" />
+                </div>
+              )
             )}
           </div>
           {isMosmCaseStudy && (
@@ -196,6 +213,11 @@ function CaseStudyDetail() {
           <div id="reflections" className="case-study-section">
             <h2>reflections</h2>
             <SectionContent content={content?.reflections} />
+            {isWingmateCaseStudy && (
+              <div className="case-study-section-image-wrapper">
+                <div className="case-study-reflection-placeholder" aria-hidden />
+              </div>
+            )}
           </div>
         </div>
       </div>

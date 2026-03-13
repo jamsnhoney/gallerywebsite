@@ -41,8 +41,8 @@ function Navbar() {
             <h1> amanda zhu </h1>
           </div>
           <p>
-            <span className="caption-desktop">graphic/ui/ux designer of products that feel natural .ᐟ </span>
-            <span className="caption-mobile">graphic ⇆ ui/ux designer .ᐟ</span>
+            <span className="caption-desktop">design with heart & build for connection .ᐟ</span>
+            <span className="caption-mobile">design with heart & connection .ᐟ</span>
           </p>
         </div>
       </Link>

@@ -11,6 +11,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@media (min-width: 1024px) {
+  body {
+    cursor: grab;
+  }
+
+  a,
+  button,
+  [role="button"],
+  .nav-links a {
+    cursor: pointer;
+  }
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

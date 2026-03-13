@@ -17,6 +17,37 @@
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
 }
 
+.top::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at top right,
+      rgba(187, 196, 228, 0.95) 0%,
+      rgba(220, 210, 232, 0.75) 25%,
+      rgba(240, 223, 228, 0.0) 55%) top right / 70% 150% no-repeat,
+    radial-gradient(circle at top right,
+      rgba(255, 255, 255, 0.4) 0,
+      rgba(255, 255, 255, 0.0) 55%) top right / 70% 150% no-repeat,
+    repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.32) 0,
+      rgba(255, 255, 255, 0.32) 1px,
+      rgba(255, 255, 255, 0.02) 2px,
+      rgba(255, 255, 255, 0.02) 3px
+    );
+  opacity: 0.9;
+  mix-blend-mode: screen;
+  mask-image: linear-gradient(to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.0) 80%);
+  -webkit-mask-image: linear-gradient(to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.0) 80%);
+  animation: navbar-noise-shift 20s linear infinite;
+}
+
 .hello-link {
   text-decoration: none;
   color: inherit;
@@ -37,7 +68,13 @@
 
 .title h1 { /* amanda zhu.ᐟ */
     font-size: 36px;
-    color: #434842;
+    background-image: linear-gradient(90deg, #434842 0%, #B3C6A9 100%);
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    animation: navbar-name-gradient 9s linear infinite;
 }
 
 
@@ -94,7 +131,7 @@
 .nav-links a {
   margin: 0;
   font-family: "Lexend", sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   color: #71776E;
   font-weight: 200;
   cursor: pointer;
@@ -167,6 +204,42 @@
   animation: bunny-wiggle-menu 0.4s ease-in-out;
 }
 
+@keyframes navbar-name-gradient {
+  0% {
+    background-image: linear-gradient(90deg, #434842 0%, #B3C6A9 100%);
+  }
+  33% {
+    background-image: linear-gradient(90deg, #434842 0%, #B4A5C3 100%);
+  }
+  66% {
+    background-image: linear-gradient(90deg, #434842 0%, #E0B5B6 100%);
+  }
+  100% {
+    background-image: linear-gradient(90deg, #434842 0%, #B4A5C3 100%);
+  }
+}
+
+@keyframes navbar-noise-shift {
+  0% {
+    background-position:
+      top right,
+      top right,
+      0 0;
+  }
+  50% {
+    background-position:
+      top right,
+      top right,
+      40px 20px;
+  }
+  100% {
+    background-position:
+      top right,
+      top right,
+      80px 0;
+  }
+}
+
 @media (min-width: 768px) {
   .navbar-bunny-desktop {
     display: block;
@@ -223,7 +296,7 @@
   }
 
   .nav-links a {
-    font-size: 13px;
+    font-size: 14px;
     padding-top: 3vh;
   }
 }
@@ -232,7 +305,11 @@
 @media (min-width: 1024px) {
   .nav-links a:hover {
     color: #9cba7c;
-    transition: color 0.3s ease;
+    /* visually bolder without reflow/layout shift */
+    text-shadow:
+      0.35px 0 currentColor,
+      -0.35px 0 currentColor;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
   }
 }
 
