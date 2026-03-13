@@ -161,6 +161,50 @@
   line-height: 1.6;
 }
 
+.wingmate-pain-points {
+  margin-top: 2rem;
+}
+
+.wingmate-pain-points-title {
+  font-family: "Lexend", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #B6B9B5;
+  margin: 0 0 1rem;
+}
+
+.wingmate-pain-points-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.wingmate-pain-point-heading {
+  display: flex;
+  gap: 0.75rem;
+  align-items: baseline;
+  margin-bottom: 0.75rem;
+}
+
+.wingmate-pain-point-number {
+  font-family: "Lexend", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #71776E;
+}
+
+.wingmate-pain-point-label {
+  font-family: "Lexend", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #71776E;
+  line-height: 1.35;
+}
+
+.wingmate-pain-point-body {
+  margin: 0;
+}
+
 .case-study-section-image-wrapper {
   margin-top: 1.5rem;
 }
@@ -280,5 +324,18 @@
 
   .case-study-meta-list span {
     font-size: 14px;
+  }
+
+  .wingmate-pain-points-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .wingmate-pain-points-title {
+    font-size: 1rem;
+  }
+
+  .wingmate-pain-point-label {
+    font-size: 0.95rem;
   }
 }

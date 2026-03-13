@@ -37,7 +37,24 @@ function CaseStudies({ items = caseStudiesData }) {
                   />
                 )}
               </div>
-              <p className="case-study-title">{item.galleryTitle || item.title}</p>
+              <p className="case-study-title">
+                {(() => {
+                  const rawTitle = item.galleryTitle || item.title || "";
+                  const [main, ...rest] = rawTitle.split("|");
+                  const desc = rest.join("|").trim();
+                  return (
+                    <>
+                      <span className="case-study-title-main">{main.trim()}</span>
+                      {desc ? (
+                        <>
+                          <span className="case-study-title-sep"> | </span>
+                          <span className="case-study-title-desc">{desc}</span>
+                        </>
+                      ) : null}
+                    </>
+                  );
+                })()}
+              </p>
             </Link>
           </article>
         ))}

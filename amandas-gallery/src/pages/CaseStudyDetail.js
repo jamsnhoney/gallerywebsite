@@ -135,6 +135,54 @@ function CaseStudyDetail() {
               <h2>problem statement</h2>
               <SectionContent content={content?.problemStatement} />
               {isWingmateCaseStudy && (
+                <div className="wingmate-pain-points">
+                  <h3 className="wingmate-pain-points-title">user pain points</h3>
+                  <div className="wingmate-pain-points-grid">
+                    <div className="wingmate-pain-point">
+                      <div className="wingmate-pain-point-heading">
+                        <span className="wingmate-pain-point-number">1</span>
+                        <span className="wingmate-pain-point-label">
+                          misrepresentation or “catfishing”.
+                        </span>
+                      </div>
+                      <p className="wingmate-pain-point-body">
+                        users frequently encounter profiles that exaggerate, mislead, or completely fake
+                        personal information. this creates a lack of trust and makes users feel much more
+                        skeptical and reluctant to interact with others on the app.
+                      </p>
+                    </div>
+
+                    <div className="wingmate-pain-point">
+                      <div className="wingmate-pain-point-heading">
+                        <span className="wingmate-pain-point-number">2</span>
+                        <span className="wingmate-pain-point-label">low effort put into profile making.</span>
+                      </div>
+                      <p className="wingmate-pain-point-body">
+                        interviewees felt that profiles they were seeing contained poor photos, very sparse
+                        or empty bios, and information that raised immediate “red flags”. this has led to
+                        feelings of frustration and discouragement from the endless scroll through profiles
+                        that don’t align with their interest, values, or expectations.
+                      </p>
+                    </div>
+
+                    <div className="wingmate-pain-point">
+                      <div className="wingmate-pain-point-heading">
+                        <span className="wingmate-pain-point-number">3</span>
+                        <span className="wingmate-pain-point-label">
+                          finding partners with similar relationship goals.
+                        </span>
+                      </div>
+                      <p className="wingmate-pain-point-body">
+                        a common concern expressed by interviewees included misaligned intentions, as many
+                        people using existing dating apps are primarily looking for something casual or
+                        hookups. users looking for long-term or a more serious relationship struggle to
+                        find matches with the same goal.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              )}
+              {isWingmateCaseStudy && (
                 <div className="case-study-pdf-wrapper">
                   <iframe
                     src={`${wingmateProposalPdf}#view=FitH`}
